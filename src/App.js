@@ -135,6 +135,7 @@ function App() {
           width="100%"
           autoPlay={true}
           loop={true}
+          controls
         />
       </div>
       <div className="allscreencanvas">
