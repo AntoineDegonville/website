@@ -28,6 +28,7 @@ function App() {
 
         <div className={!opac ? "buttonenter" : "buttonout"}>
           <p
+            className="noselect"
             onClick={() => {
               video.play();
               audioenter.play();

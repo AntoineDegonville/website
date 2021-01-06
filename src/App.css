@@ -248,6 +248,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  animation-name: border;
+  animation-duration: 1s;
+}
+@keyframes border {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 800px;
+  }
 }
 
 .text {
@@ -262,7 +272,8 @@
   color: white;
   width: 100%;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
+  padding-bottom: 80px;
   font-family: "Abel", sans-serif;
   animation-name: pop;
   animation-duration: 15s;
