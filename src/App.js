@@ -105,7 +105,7 @@ function App() {
           </div>
           <div className={opac ? "clickme" : null}>
             <p
-              className="onclick"
+              className={opac ? "onclick" : null}
               onClick={() => {
                 setClicked(!clicked);
               }}
@@ -130,7 +130,7 @@ function App() {
           <div className="canvas">
             <TextyAnim
               className="text"
-              type="mask-top"
+              type="mask-bottom"
               duration={(e) => {
                 if (e.index === 8) {
                   return 1000;
