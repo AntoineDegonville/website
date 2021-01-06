@@ -13,6 +13,7 @@ function App() {
   const [clicked, setClicked] = useState(false);
   const [entered, setEntered] = useState(0);
   const [clickedoff, setClickedOff] = useState(false);
+  console.log(clicked);
 
   let audiopad = new Audio(sound);
   let audioenter = new Audio(enter);
@@ -37,12 +38,13 @@ function App() {
               audiorain.loop = true;
               audiorain.volume = 0.7;
               audioenter.volume = 1;
-              setOpac(true);
+
               setEntered(1);
               setTimeout(() => {
+                setOpac(true);
                 audiopad.play();
                 audiopad.volume = 1;
-              }, 1000);
+              }, 2000);
             }}
           >
             Enter

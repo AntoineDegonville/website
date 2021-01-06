@@ -254,9 +254,11 @@
 @keyframes border {
   from {
     height: 0px;
+    opacity: 0;
   }
   to {
     height: 800px;
+    opacity: 1;
   }
 }
 
@@ -275,9 +277,11 @@
 @keyframes borderoff {
   from {
     height: 800px;
+    opacity: 1;
   }
   to {
     height: 0px;
+    opacity: 0;
   }
 }
 
