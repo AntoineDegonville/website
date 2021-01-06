@@ -93,7 +93,6 @@
   top: 0;
   width: 100vw;
   height: 100vh;
-  border: 1px solid red;
   box-sizing: border-box;
 }
 .rainon {
@@ -192,6 +191,7 @@
   top: 0;
   width: 250px;
   height: 100%;
+  display: flex;
 }
 
 .contact {
@@ -227,4 +227,58 @@
   to {
     opacity: 1;
   }
+}
+.allscreencanvas {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.canvas {
+  width: 1400px;
+  height: 800px;
+  border-left: solid lightgray 1px;
+  border-radius: 5px;
+  top: 0;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  color: white;
+  opacity: 1;
+  font-size: 200px;
+  font-family: "Abel", sans-serif;
+}
+
+.clickme {
+  display: flex;
+  color: white;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-family: "Abel", sans-serif;
+  animation-name: pop;
+  animation-duration: 15s;
+}
+@keyframes pop {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.onclick:hover {
+  font-weight: bold;
+  cursor: pointer;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 10px;
 }

@@ -10,6 +10,8 @@ import pine from "../src/assets/video/PineSite.mp4";
 function App() {
   const [opac, setOpac] = useState(false);
   const [video, setVideo] = useState();
+  const [clicked, setClicked] = useState(false);
+  console.log(clicked);
   let audiopad = new Audio(sound);
   let audioenter = new Audio(enter);
   let audiorain = new Audio(rainsound);
@@ -101,7 +103,18 @@ function App() {
               ) : null}
             </div>
           </div>
+          <div className={opac ? "clickme" : null}>
+            <p
+              className="onclick"
+              onClick={() => {
+                setClicked(!clicked);
+              }}
+            >
+              TRY ME
+            </p>
+          </div>
         </div>
+
         <video
           className={opac ? "videopine" : "videopineoff"}
           src={pine}
@@ -111,6 +124,33 @@ function App() {
           autoPlay={true}
           loop={true}
         />
+      </div>
+      <div className="allscreencanvas">
+        {clicked ? (
+          <div className="canvas">
+            <TextyAnim
+              className="text"
+              type="mask-top"
+              duration={(e) => {
+                if (e.index === 8) {
+                  return 1000;
+                }
+                return 1000;
+              }}
+              interval={(e) => {
+                if (e.index === 2) {
+                  return 500;
+                }
+                return e.index * 50;
+              }}
+              onEnd={(type) => {
+                console.log(type);
+              }}
+            >
+              MANGE TES MORTS
+            </TextyAnim>
+          </div>
+        ) : null}
       </div>
     </>
   );
