@@ -260,6 +260,27 @@
   }
 }
 
+.offclick {
+  width: 1400px;
+  border-left: solid lightgray 1px;
+  border-radius: 5px;
+  top: 0;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: borderoff;
+  animation-duration: 1s;
+}
+@keyframes borderoff {
+  from {
+    height: 800px;
+  }
+  to {
+    height: 0px;
+  }
+}
+
 .text {
   color: white;
   opacity: 1;
@@ -295,4 +316,27 @@
   font-weight: bold;
   cursor: pointer;
   padding: 10px;
+}
+
+.invisible {
+  display: none;
+}
+
+.pythatext {
+  color: white;
+  font-size: 18px;
+  font-style: italic;
+  position: absolute;
+  bottom: 350px;
+  right: 150px;
+  animation-name: pytatext;
+  animation-duration: 5s;
+}
+@keyframes pytatext {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

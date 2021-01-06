@@ -11,7 +11,9 @@ function App() {
   const [opac, setOpac] = useState(false);
   const [video, setVideo] = useState();
   const [clicked, setClicked] = useState(false);
-  console.log(clicked);
+  const [entered, setEntered] = useState(0);
+  const [clickedoff, setClickedOff] = useState(false);
+
   let audiopad = new Audio(sound);
   let audioenter = new Audio(enter);
   let audiorain = new Audio(rainsound);
@@ -36,6 +38,7 @@ function App() {
               audiorain.volume = 0.7;
               audioenter.volume = 1;
               setOpac(true);
+              setEntered(1);
               setTimeout(() => {
                 audiopad.play();
                 audiopad.volume = 1;
@@ -45,6 +48,11 @@ function App() {
             Enter
           </p>
         </div>
+
+        <p className="pythatext">
+          "There is geometry in the humming of the strings, there is music in
+          the spacing of the spheres."
+        </p>
       </div>
 
       <div className="allscreen">
@@ -70,7 +78,7 @@ function App() {
                       return e.index * 50;
                     }}
                     onEnd={(type) => {
-                      console.log(type);
+                      // console.log(type);
                     }}
                   >
                     Antoine Degonville
@@ -96,7 +104,7 @@ function App() {
                     return e.index * 50;
                   }}
                   onEnd={(type) => {
-                    console.log(type);
+                    // console.log(type);
                   }}
                 >
                   Developper Fullstack
@@ -106,9 +114,10 @@ function App() {
           </div>
           <div className={opac ? "clickme" : null}>
             <p
-              className={opac ? "onclick" : null}
+              className={opac ? "onclick" : "invisible"}
               onClick={() => {
                 setClicked(!clicked);
+                setClickedOff(true);
               }}
             >
               ABOUT
@@ -145,13 +154,18 @@ function App() {
                 return e.index * 50;
               }}
               onEnd={(type) => {
-                console.log(type);
+                // console.log(type);
               }}
             >
-              MANGE TES MORTS
+              {/* MANGE TES MORTS */}
+              COMING SOON
             </TextyAnim>
           </div>
-        ) : null}
+        ) : (
+          <div
+            className={entered === 1 && clickedoff === true ? "offclick" : null}
+          ></div>
+        )}
       </div>
     </>
   );
