@@ -10,10 +10,10 @@ import pine from "../src/assets/video/PineSite.mp4";
 function App() {
   const [opac, setOpac] = useState(false);
   const [video, setVideo] = useState();
+  const [videopytha, setVideoPytha] = useState();
   const [clicked, setClicked] = useState(false);
   const [entered, setEntered] = useState(0);
   const [clickedoff, setClickedOff] = useState(false);
-  console.log(clicked);
 
   let audiopad = new Audio(sound);
   let audioenter = new Audio(enter);
@@ -34,6 +34,7 @@ function App() {
             className="noselect"
             onClick={() => {
               video.play();
+              videopytha.play();
               audioenter.play();
               audiorain.loop = true;
               audiorain.volume = 0.7;
@@ -128,14 +129,13 @@ function App() {
         </div>
 
         <video
+          ref={(videoRef) => setVideoPytha(videoRef)}
           className={opac ? "videopine" : "videopineoff"}
           src={pine}
           type="video/mp4"
           height="100%"
           width="100%"
-          autoPlay={true}
           loop={true}
-          controls
         />
       </div>
       <div className="allscreencanvas">
