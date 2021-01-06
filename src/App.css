@@ -289,14 +289,10 @@
 
 .onclick {
   font-size: 20px;
-  border: 1px solid white;
-  border-radius: 10px;
   padding: 10px;
 }
 .onclick:hover {
   font-weight: bold;
   cursor: pointer;
-  border: 2px solid white;
-  border-radius: 10px;
   padding: 10px;
 }

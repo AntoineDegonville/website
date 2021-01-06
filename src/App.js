@@ -111,7 +111,7 @@ function App() {
                 setClicked(!clicked);
               }}
             >
-              TRY ME
+              ABOUT
             </p>
           </div>
         </div>
