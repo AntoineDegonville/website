@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import TextyAnim from "rc-texty";
 import "./App.css";
 import pythagore from "../src/assets/video/Pytha360flip.mp4";
 import sound from "../src/assets/sounds/sound.mp3";
 import enter from "../src/assets/sounds/enter.mp3";
 import rainsound from "../src/assets/sounds/rain.mp3";
+import pine from "../src/assets/video/PineSite.mp4";
 
 function App() {
   const [opac, setOpac] = useState(false);
@@ -46,13 +48,69 @@ function App() {
         <div className="leftsidebar">
           <div className={opac ? "headername" : "headeroff"}>
             <div className="headertitle1">
-              <p>Antoine Degonville</p>
+              <div
+                className={opac ? "antoinedegonville" : "antoinedegonvilleoff"}
+              >
+                {opac ? (
+                  <TextyAnim
+                    type="mask-top"
+                    duration={(e) => {
+                      if (e.index === 8) {
+                        return 1000;
+                      }
+                      return 1000;
+                    }}
+                    interval={(e) => {
+                      if (e.index === 2) {
+                        return 500;
+                      }
+                      return e.index * 50;
+                    }}
+                    onEnd={(type) => {
+                      console.log(type);
+                    }}
+                  >
+                    Antoine Degonville
+                  </TextyAnim>
+                ) : null}
+              </div>
             </div>
             <div className="headertitle">
-              <p>Developper Fullstack</p>
+              {opac ? (
+                <TextyAnim
+                  type="mask-bottom"
+                  smooth="random"
+                  duration={(e) => {
+                    if (e.index === 8) {
+                      return 1000;
+                    }
+                    return 1000;
+                  }}
+                  interval={(e) => {
+                    if (e.index === 2) {
+                      return 500;
+                    }
+                    return e.index * 50;
+                  }}
+                  onEnd={(type) => {
+                    console.log(type);
+                  }}
+                >
+                  Developper Fullstack
+                </TextyAnim>
+              ) : null}
             </div>
           </div>
         </div>
+        <video
+          className={opac ? "videopine" : "videopineoff"}
+          src={pine}
+          type="video/mp4"
+          height="100%"
+          width="100%"
+          autoPlay={true}
+          loop={true}
+        />
       </div>
     </>
   );

@@ -56,7 +56,6 @@
 }
 .buttonenter:hover {
   font-weight: bold;
-  text-decoration: underline;
 }
 @keyframes enter {
   from {
@@ -134,16 +133,29 @@
   font-family: "Abel", sans-serif;
   font-size: 20px;
   animation-name: pop;
-  animation-duration: 5s;
+  animation-duration: 3s;
 }
 
 @keyframes pop {
   from {
-    margin-left: -200px;
     opacity: 0;
   }
   to {
-    margin-left: 20px;
+    opacity: 1;
+  }
+}
+.antoinedegonville {
+  animation-name: name;
+  animation-duration: 1s;
+}
+
+@keyframes name {
+  from {
+    margin-top: -100px;
+    opacity: 0;
+  }
+  to {
+    margin-top: 0px;
     opacity: 1;
   }
 }
@@ -155,6 +167,16 @@
   border-bottom: 1px solid white;
   width: 100%;
   height: 50%;
+  animation-name: linear;
+  animation-duration: 2s;
+}
+@keyframes linear {
+  from {
+    width: 70%;
+  }
+  to {
+    width: 100%;
+  }
 }
 .headertitle {
   display: flex;
@@ -165,6 +187,8 @@
 }
 .leftsidebar {
   position: absolute;
+  opacity: 1;
+  z-index: 3;
   top: 0;
   width: 250px;
   height: 100%;
@@ -186,4 +210,21 @@
   width: 100%;
   height: 100%;
   box-sizing: border-box;
+}
+
+.videopineoff {
+  opacity: 0;
+}
+.videopine {
+  object-fit: cover;
+  animation-name: pinetree;
+  animation-duration: 10s;
+}
+@keyframes pinetree {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
