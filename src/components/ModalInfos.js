@@ -32,7 +32,7 @@ const ModalInfos = ({ infosclicked, entered, infosclickedoff }) => {
             <div className="descriptioncontainer">
               <TextyAnim
                 className="description"
-                type="mask-top"
+                type="scaleBig"
                 duration={(e) => {
                   if (e.index === 8) {
                     return 800;
@@ -43,7 +43,7 @@ const ModalInfos = ({ infosclicked, entered, infosclickedoff }) => {
                   if (e.index === 2) {
                     return 500;
                   }
-                  return e.index * 30;
+                  return e.index * 2;
                 }}
                 onEnd={(type) => {
                   // console.log(type);

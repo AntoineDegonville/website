@@ -83,6 +83,9 @@ const Sidebar = ({
             onClick={() => {
               setStackClicked(!stackclicked);
               setStackClickedOff(true);
+              setProjetsClicked(false);
+              setInfosClicked(false);
+              setContactClicked(false);
               setStack(!stack);
               setProjets(false);
               setInfos(false);
@@ -97,8 +100,10 @@ const Sidebar = ({
           <p
             onClick={() => {
               setProjetsClicked(!projetsclicked);
-              console.log(">>>>", projetsclicked);
               setProjetsClickedOff(true);
+              setStackClicked(false);
+              setInfosClicked(false);
+              setContactClicked(false);
               setProjets(!projets);
               setStack(false);
               setInfos(false);
@@ -113,6 +118,9 @@ const Sidebar = ({
             onClick={() => {
               setInfosClicked(!infosclicked);
               setInfosClickedOff(true);
+              setStackClicked(false);
+              setProjetsClicked(false);
+              setContactClicked(false);
               setInfos(!infos);
               setProjets(false);
               setStack(false);
@@ -127,6 +135,9 @@ const Sidebar = ({
             onClick={() => {
               setContactClicked(!contactclicked);
               setContactClickedOff(true);
+              setStackClicked(false);
+              setProjetsClicked(false);
+              setInfosClicked(false);
               setContact(!contact);
               setProjets(false);
               setStack(false);

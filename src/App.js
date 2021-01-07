@@ -9,7 +9,6 @@ import pythagore from "../src/assets/video/Pytha360flip.mp4";
 import sound from "../src/assets/sounds/sound.mp3";
 import enter from "../src/assets/sounds/enter.mp3";
 import rainsound from "../src/assets/sounds/rain.mp3";
-// import pine from "../src/assets/video/PineSite.mp4";
 
 function App() {
   const [opac, setOpac] = useState(false);

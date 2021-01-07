@@ -34,15 +34,22 @@
 }
 .descriptioncontainer {
   display: flex;
+  justify-content: space-around;
   width: 100%;
+  border: 2px solid green;
 }
 .descriptionstack {
   font-family: "Abel", sans-serif;
   font-size: 30px;
-  width: 500px;
+  width: 200px;
   padding-left: 20px;
   display: flex;
   justify-content: center;
+  border: 2px solid pink;
+}
+.descriptionstack:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 .offclick {
   margin-left: 20px;
