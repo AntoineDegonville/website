@@ -9,7 +9,8 @@
   align-items: center;
 }
 
-.canvas {
+.canvasstack {
+  margin-left: 20px;
   width: 68%;
   height: 80%;
   border-left: solid lightgray 1px;

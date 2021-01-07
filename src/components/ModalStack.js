@@ -8,7 +8,7 @@ const ModalStack = ({ stackclicked, entered, stackclickedoff }) => {
     <div className="allscreencanvas">
       {stackclicked ? (
         <>
-          <div className="canvas">
+          <div className="canvasstack">
             <TextyAnim
               className="text"
               type="mask-bottom"
