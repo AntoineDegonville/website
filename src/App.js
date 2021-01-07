@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Sidebar from "./components/Sidebar";
 import ModalInfos from "./components/ModalInfos";
 import ModalStack from "./components/ModalStack";
@@ -37,20 +37,22 @@ function App() {
             <p
               className="enter"
               onClick={() => {
-                video.play();
                 videopytha.play();
+                video.play();
                 audioenter.play();
-
+                audioenter.volume = 0.6;
                 audiorain.loop = true;
                 audiorain.volume = 0.7;
                 audioenter.volume = 1;
-
                 setEntered(1);
                 setTimeout(() => {
                   setOpac(true);
                   audiopad.play();
-                  audiopad.volume = 1;
-                  audiorain.play();
+                  audiopad.volume = 0.8;
+                  setTimeout(() => {
+                    audiorain.play();
+                    audiorain.volume = 0.4;
+                  }, 1500);
                 }, 2000);
               }}
             >
@@ -91,7 +93,7 @@ function App() {
         <video
           ref={(videoRef) => setVideoPytha(videoRef)}
           className={opac ? "videopine" : "videopineoff"}
-          src={pine}
+          src="https://res.cloudinary.com/dta6lllnx/video/upload/v1610049300/PineSite_jdafms.mp4"
           type="video/mp4"
           height="100%"
           width="100%"

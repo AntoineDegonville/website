@@ -12,9 +12,8 @@
 .canvas {
   margin-left: 20px;
   width: 68%;
-  height: 80%;
   border-left: solid lightgray 1px;
-  top: 0;
+  /* top: 0; */
   color: white;
   display: flex;
   flex-direction: column;
