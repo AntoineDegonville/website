@@ -1,23 +1,33 @@
 .background {
-  position: relative;
   display: flex;
   background-color: black;
   width: 100wh;
   height: 100vh;
   color: white;
-  position: relative;
+  /* position: relative; */
   font-family: "Abel", sans-serif;
+  /* border: 2px solid red; */
+}
+.container {
+  /* border: 2px solid white; */
+  width: 100%;
+  display: flex;
+  /* background-color: purple; */
+}
+.containerpytha {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .video {
-  position: absolute;
+  display: flex;
   right: 0;
   bottom: 30;
-  width: 1550px;
-  margin-top: 70px;
+  width: 50%;
   animation-name: pyta;
   animation-duration: 5s;
+  position: relative;
 }
 @keyframes pyta {
   from {
@@ -28,11 +38,9 @@
   }
 }
 .videoout {
-  position: absolute;
   right: 0;
   bottom: 30;
-  width: 1550px;
-  margin-top: 70px;
+  width: 50%;
   animation-name: pytaout;
   animation-duration: 4s;
   opacity: 0;
@@ -46,15 +54,20 @@
   }
 }
 .buttonenter {
-  margin-right: 800px;
   z-index: 1;
   font-size: 30px;
-  cursor: pointer;
   opacity: 1;
   animation-name: enter;
   animation-duration: 10s;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.buttonenter:hover {
+.enter {
+  cursor: pointer;
+}
+.enter:hover {
   font-weight: bold;
 }
 @keyframes enter {
@@ -66,52 +79,64 @@
   }
 }
 .buttonout {
-  margin-right: 800px;
-  z-index: 2;
+  z-index: 0;
   font-size: 30px;
-  cursor: pointer;
-  opacity: 1;
+  width: 50%;
   animation-name: out;
   animation-duration: 3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   opacity: 0;
-  display: none;
 }
 @keyframes out {
   from {
     opacity: 1;
-    display: flex;
   }
   to {
     opacity: 0;
-    display: none;
   }
 }
-
-.rainoff {
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  box-sizing: border-box;
+.pythatext {
+  color: white;
+  font-size: 18px;
+  font-style: italic;
+  bottom: 350px;
+  right: 150px;
+  animation-name: pytatext;
+  animation-duration: 5s;
+  /* border: solid 2px blue; */
+  margin-top: 20px;
 }
-.rainon {
-  opacity: 0.5;
-  position: absolute;
-  top: 0;
-  box-sizing: border-box;
-  animation-name: rainon;
-  animation-duration: 35s;
-  object-fit: cover;
-  z-index: 0;
-}
-@keyframes rainon {
+@keyframes pytatext {
   from {
     opacity: 0;
   }
   to {
-    opacity: 0.5;
+    opacity: 1;
   }
+}
+/* __________________________________________________ */
+
+.allscreen {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  /* border: 3px solid orange; */
+}
+.leftsidebar {
+  /* border: 3px solid blueviolet; */
+  position: absolute;
+  opacity: 1;
+  z-index: 3;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .headeroff {
@@ -120,6 +145,7 @@
 
 .headername {
   position: absolute;
+  /* border: 3px solid green; */
   top: 0;
   margin-left: 20px;
   width: 200px;
@@ -184,15 +210,6 @@
   width: 100%;
   height: 50%;
 }
-.leftsidebar {
-  position: absolute;
-  opacity: 1;
-  z-index: 3;
-  top: 0;
-  width: 250px;
-  height: 100%;
-  display: flex;
-}
 
 .contact {
   margin-top: 500px;
@@ -204,18 +221,13 @@
   align-items: center;
   font-size: 20px;
 }
-.allscreen {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-}
 
 .videopineoff {
   opacity: 0;
 }
 .videopine {
+  position: absolute;
+  top: 0;
   object-fit: cover;
   animation-name: pinetree;
   animation-duration: 10s;
@@ -238,18 +250,21 @@
   justify-content: center;
   align-items: center;
 }
+
 .canvas {
-  width: 1400px;
-  height: 800px;
+  width: 68%;
+  height: 80%;
   border-left: solid lightgray 1px;
-  border-radius: 5px;
+
   top: 0;
   color: white;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   animation-name: border;
   animation-duration: 1s;
+  /* border: 2px solid yellow; */
 }
 @keyframes border {
   from {
@@ -263,7 +278,7 @@
 }
 
 .offclick {
-  width: 1400px;
+  width: 68%;
   border-left: solid lightgray 1px;
   border-radius: 5px;
   top: 0;
@@ -326,21 +341,29 @@
   display: none;
 }
 
-.pythatext {
-  color: white;
-  font-size: 18px;
-  font-style: italic;
-  position: absolute;
-  bottom: 350px;
-  right: 150px;
-  animation-name: pytatext;
-  animation-duration: 5s;
+.test {
+  /* border: 3px solid pink; */
+  width: 100%;
+  margin-top: 140px;
+  display: flex;
+  justify-content: center;
+  font-family: "Abel", sans-serif;
+  font-size: 20px;
 }
-@keyframes pytatext {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+
+.mangetesmorts {
+  /* border: 5px solid red; */
+  height: 100px;
+  width: 100%;
+  z-index: 3;
+}
+.descriptioncontainer {
+  display: flex;
+  width: 100%;
+}
+.description {
+  font-family: "Abel", sans-serif;
+  font-size: 30px;
+  width: 500px;
+  padding-left: 20px;
 }

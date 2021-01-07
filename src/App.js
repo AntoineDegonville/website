@@ -22,40 +22,44 @@ function App() {
   return (
     <>
       <div className="background">
-        <video
-          ref={(videoRef) => setVideo(videoRef)}
-          className={!opac ? "video" : "videoout"}
-          src={pythagore}
-          type="video/mp4"
-        />
+        <div className="container">
+          <div className={!opac ? "buttonenter" : "buttonout"}>
+            <p
+              className="enter"
+              onClick={() => {
+                video.play();
+                videopytha.play();
+                audioenter.play();
 
-        <div className={!opac ? "buttonenter" : "buttonout"}>
-          <p
-            className="noselect"
-            onClick={() => {
-              video.play();
-              videopytha.play();
-              audioenter.play();
-              audiorain.loop = true;
-              audiorain.volume = 0.7;
-              audioenter.volume = 1;
+                audiorain.loop = true;
+                audiorain.volume = 0.7;
+                audioenter.volume = 1;
 
-              setEntered(1);
-              setTimeout(() => {
-                setOpac(true);
-                audiopad.play();
-                audiopad.volume = 1;
-              }, 2000);
-            }}
-          >
-            Enter
-          </p>
+                setEntered(1);
+                setTimeout(() => {
+                  setOpac(true);
+                  audiopad.play();
+                  audiopad.volume = 1;
+                  audiorain.play();
+                }, 2000);
+              }}
+            >
+              Enter
+            </p>
+          </div>
+          <div className="containerpytha">
+            <video
+              ref={(videoRef) => setVideo(videoRef)}
+              className={!opac ? "video" : "videoout"}
+              src={pythagore}
+              type="video/mp4"
+            ></video>
+            <p className="pythatext">
+              "There is geometry in the humming of the strings, there is music
+              in the spacing of the spheres."
+            </p>
+          </div>
         </div>
-
-        <p className="pythatext">
-          "There is geometry in the humming of the strings, there is music in
-          the spacing of the spheres."
-        </p>
       </div>
 
       <div className="allscreen">
@@ -115,6 +119,9 @@ function App() {
               ) : null}
             </div>
           </div>
+          <div className={opac ? "test" : "invisible"}>
+            <p style={{ color: "white" }}></p>
+          </div>
           <div className={opac ? "clickme" : null}>
             <p
               className={opac ? "onclick" : "invisible"}
@@ -123,7 +130,7 @@ function App() {
                 setClickedOff(true);
               }}
             >
-              ABOUT
+              INFOS
             </p>
           </div>
         </div>
@@ -138,32 +145,47 @@ function App() {
           loop={true}
         />
       </div>
+
       <div className="allscreencanvas">
         {clicked ? (
-          <div className="canvas">
-            <TextyAnim
-              className="text"
-              type="mask-bottom"
-              duration={(e) => {
-                if (e.index === 8) {
+          <>
+            <div className="canvas">
+              <TextyAnim
+                className="text"
+                type="mask-bottom"
+                duration={(e) => {
+                  if (e.index === 8) {
+                    return 1000;
+                  }
                   return 1000;
-                }
-                return 1000;
-              }}
-              interval={(e) => {
-                if (e.index === 2) {
-                  return 500;
-                }
-                return e.index * 50;
-              }}
-              onEnd={(type) => {
-                // console.log(type);
-              }}
-            >
-              {/* MANGE TES MORTS */}
-              COMING SOON
-            </TextyAnim>
-          </div>
+                }}
+                interval={(e) => {
+                  if (e.index === 2) {
+                    return 500;
+                  }
+                  return e.index * 50;
+                }}
+                onEnd={(type) => {
+                  // console.log(type);
+                }}
+              >
+                MOTIVATION PROJET
+                {/* COMING SOON */}
+              </TextyAnim>
+              <div className="descriptioncontainer">
+                <p className="description">
+                  Après plusieurs années passées à étudier, pratiquer, puis
+                  enseigner les musiques électroniques, ses machines et
+                  logiciels, je souhaite aujourd’hui passer du côté technique de
+                  l’informatique. Lors de ma récente formation de développeur
+                  web, l’aisance avec laquelle j’ai appréhendé ces nouveaux
+                  concepts a confirmé que ce métier est fait pour moi. J’ai
+                  maintenant hâte de mettre mes compétences au service d’une
+                  équipe pour continuer de progresser.
+                </p>
+              </div>
+            </div>
+          </>
         ) : (
           <div
             className={entered === 1 && clickedoff === true ? "offclick" : null}
