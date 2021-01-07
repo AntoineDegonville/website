@@ -1,76 +1,252 @@
-html,
-body {
-  margin: 0;
+.leftsidebar {
+  position: absolute;
+  opacity: 1;
+  z-index: 3;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 20px;
 }
 
-#App {
-  font-family: sans-serif;
-  height: 100vh;
+.headeroff {
+  display: none;
 }
 
-#page-wrap {
-  text-align: center;
-  overflow: auto;
-  top: 45%;
-  position: relative;
-}
-
-.bm-item {
-  display: inline-block;
-
-  /* Our sidebar item styling */
-  text-decoration: none;
-  margin-bottom: 10px;
-  color: #d1d1d1;
-  transition: color 0.2s;
-}
-
-.bm-item:hover {
+.headername {
+  position: absolute;
+  top: 0;
+  margin-left: 20px;
+  width: 200px;
+  height: 100px;
   color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Abel", sans-serif;
+  font-size: 20px;
+  animation-name: pop;
+  animation-duration: 3s;
+}
+.antoinedegonville {
+  animation-name: name;
+  animation-duration: 1s;
 }
 
-.bm-burger-button {
-  position: fixed;
-  width: 36px;
-  height: 30px;
-  right: 36px;
-  top: 36px;
+@keyframes name {
+  from {
+    margin-top: -100px;
+    opacity: 0;
+  }
+  to {
+    margin-top: 0px;
+    opacity: 1;
+  }
 }
 
-/* Color/shape of burger icon bars */
-.bm-burger-bars {
-  background: #373a47;
+.headertitle1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid white;
+  width: 100%;
+  height: 50%;
+  animation-name: linear;
+  animation-duration: 2s;
+}
+@keyframes linear {
+  from {
+    width: 70%;
+  }
+  to {
+    width: 100%;
+  }
 }
 
-/* Position and sizing of clickable cross button */
-.bm-cross-button {
-  height: 24px;
-  width: 24px;
+.headertitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50%;
 }
 
-/* Color/shape of close button cross */
-.bm-cross {
-  background: #bdc3c7;
+.menu {
+  margin-top: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  animation-name: pop;
+  animation-duration: 10s;
+}
+@keyframes pop {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.menuitem {
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Abel", sans-serif;
+  font-size: 20px;
+}
+.menuprojet {
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Abel", sans-serif;
+  font-size: 20px;
+}
+.menuprojet p {
+  cursor: pointer;
+}
+.menuprojetclicked {
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Abel", sans-serif;
+  font-size: 20px;
+  border-bottom: 1px solid white;
+  animation-name: underline;
+  animation-duration: 2s;
+}
+.menuprojetclicked p {
+  cursor: pointer;
+}
+@keyframes underline {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-/* General sidebar styles */
-.bm-menu {
-  background: #000;
-  padding: 2.5em 1.5em 0;
-  font-size: 1.15em;
+.menuinfos {
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Abel", sans-serif;
+  font-size: 20px;
+}
+.menuinfos p {
+  cursor: pointer;
+}
+.menuinfosclicked {
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Abel", sans-serif;
+  font-size: 20px;
+  border-bottom: 1px solid white;
+  animation-name: underline;
+  animation-duration: 2s;
+}
+.menuinfosclicked p {
+  cursor: pointer;
+}
+@keyframes underline {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.menustack {
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Abel", sans-serif;
+  font-size: 20px;
+}
+.menustack p {
+  cursor: pointer;
+}
+.menustackclicked {
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Abel", sans-serif;
+  font-size: 20px;
+  border-bottom: 1px solid white;
+  animation-name: underline;
+  animation-duration: 2s;
+}
+.menustackclicked p {
+  cursor: pointer;
+}
+@keyframes underline {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.menucontact {
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Abel", sans-serif;
+  font-size: 20px;
+}
+.menucontact p {
+  cursor: pointer;
+}
+.menucontactclicked {
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Abel", sans-serif;
+  font-size: 20px;
+  border-bottom: 1px solid white;
+  animation-name: underline;
+  animation-duration: 2s;
+}
+.menucontactclicked p {
+  cursor: pointer;
+}
+@keyframes underline {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.menuitem p {
+  cursor: pointer;
 }
 
-/* Morph shape necessary with bubble or elastic */
-.bm-morph-shape {
-  fill: #373a47;
+.invisible {
+  display: none;
 }
 
-/* Wrapper for item list */
-.bm-item-list {
-  color: #b8b7ad;
-}
-
-/* Styling of overlay */
-.bm-overlay {
-  background: rgba(0, 0, 0, 0.3);
-}
+/* --------------------------------- */

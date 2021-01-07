@@ -1,5 +1,9 @@
 import React, { useState } from "react";
-import TextyAnim from "rc-texty";
+import Sidebar from "./components/Sidebar";
+import ModalInfos from "./components/ModalInfos";
+import ModalStack from "./components/ModalStack";
+import ModalContact from "./components/ModalContact";
+import ModalProjets from "./components/ModalProjets";
 import "./App.css";
 import pythagore from "../src/assets/video/Pytha360flip.mp4";
 import sound from "../src/assets/sounds/sound.mp3";
@@ -11,9 +15,15 @@ function App() {
   const [opac, setOpac] = useState(false);
   const [video, setVideo] = useState();
   const [videopytha, setVideoPytha] = useState();
-  const [clicked, setClicked] = useState(false);
   const [entered, setEntered] = useState(0);
-  const [clickedoff, setClickedOff] = useState(false);
+  const [infosclicked, setInfosClicked] = useState(false);
+  const [infosclickedoff, setInfosClickedOff] = useState(false);
+  const [stackclicked, setStackClicked] = useState(false);
+  const [stackclickedoff, setStackClickedOff] = useState(false);
+  const [contactclicked, setContactClicked] = useState(false);
+  const [contactclickedoff, setContactClickedOff] = useState(false);
+  const [projetsclicked, setProjetsClicked] = useState(false);
+  const [projetsclickedoff, setProjetsClickedOff] = useState(false);
 
   let audiopad = new Audio(sound);
   let audioenter = new Audio(enter);
@@ -63,78 +73,21 @@ function App() {
       </div>
 
       <div className="allscreen">
-        <div className="leftsidebar">
-          <div className={opac ? "headername" : "headeroff"}>
-            <div className="headertitle1">
-              <div
-                className={opac ? "antoinedegonville" : "antoinedegonvilleoff"}
-              >
-                {opac ? (
-                  <TextyAnim
-                    type="mask-top"
-                    duration={(e) => {
-                      if (e.index === 8) {
-                        return 1000;
-                      }
-                      return 1000;
-                    }}
-                    interval={(e) => {
-                      if (e.index === 2) {
-                        return 500;
-                      }
-                      return e.index * 50;
-                    }}
-                    onEnd={(type) => {
-                      // console.log(type);
-                    }}
-                  >
-                    Antoine Degonville
-                  </TextyAnim>
-                ) : null}
-              </div>
-            </div>
-            <div className="headertitle">
-              {opac ? (
-                <TextyAnim
-                  type="mask-bottom"
-                  smooth="random"
-                  duration={(e) => {
-                    if (e.index === 8) {
-                      return 1000;
-                    }
-                    return 1000;
-                  }}
-                  interval={(e) => {
-                    if (e.index === 2) {
-                      return 500;
-                    }
-                    return e.index * 50;
-                  }}
-                  onEnd={(type) => {
-                    // console.log(type);
-                  }}
-                >
-                  Developper Fullstack
-                </TextyAnim>
-              ) : null}
-            </div>
-          </div>
-          <div className={opac ? "test" : "invisible"}>
-            <p style={{ color: "white" }}></p>
-          </div>
-          <div className={opac ? "clickme" : null}>
-            <p
-              className={opac ? "onclick" : "invisible"}
-              onClick={() => {
-                setClicked(!clicked);
-                setClickedOff(true);
-              }}
-            >
-              INFOS
-            </p>
-          </div>
-        </div>
-
+        <Sidebar
+          opac={opac}
+          setInfosClicked={setInfosClicked}
+          setInfosClickedOff={setInfosClickedOff}
+          infosclicked={infosclicked}
+          setStackClicked={setStackClicked}
+          setStackClickedOff={setStackClickedOff}
+          stackclicked={stackclicked}
+          setContactClicked={setContactClicked}
+          setContactClickedOff={setContactClickedOff}
+          contactclicked={contactclicked}
+          setProjetsClicked={setProjetsClicked}
+          setProjetsClickedOff={setProjetsClickedOff}
+          projetsclicked={projetsclicked}
+        ></Sidebar>
         <video
           ref={(videoRef) => setVideoPytha(videoRef)}
           className={opac ? "videopine" : "videopineoff"}
@@ -146,52 +99,26 @@ function App() {
         />
       </div>
 
-      <div className="allscreencanvas">
-        {clicked ? (
-          <>
-            <div className="canvas">
-              <TextyAnim
-                className="text"
-                type="mask-bottom"
-                duration={(e) => {
-                  if (e.index === 8) {
-                    return 1000;
-                  }
-                  return 1000;
-                }}
-                interval={(e) => {
-                  if (e.index === 2) {
-                    return 500;
-                  }
-                  return e.index * 50;
-                }}
-                onEnd={(type) => {
-                  // console.log(type);
-                }}
-              >
-                MOTIVATION PROJET
-                {/* COMING SOON */}
-              </TextyAnim>
-              <div className="descriptioncontainer">
-                <p className="description">
-                  Après plusieurs années passées à étudier, pratiquer, puis
-                  enseigner les musiques électroniques, ses machines et
-                  logiciels, je souhaite aujourd’hui passer du côté technique de
-                  l’informatique. Lors de ma récente formation de développeur
-                  web, l’aisance avec laquelle j’ai appréhendé ces nouveaux
-                  concepts a confirmé que ce métier est fait pour moi. J’ai
-                  maintenant hâte de mettre mes compétences au service d’une
-                  équipe pour continuer de progresser.
-                </p>
-              </div>
-            </div>
-          </>
-        ) : (
-          <div
-            className={entered === 1 && clickedoff === true ? "offclick" : null}
-          ></div>
-        )}
-      </div>
+      <ModalInfos
+        infosclicked={infosclicked}
+        entered={entered}
+        infosclickedoff={infosclickedoff}
+      ></ModalInfos>
+      <ModalStack
+        stackclicked={stackclicked}
+        entered={entered}
+        stackclickedoff={stackclickedoff}
+      ></ModalStack>
+      <ModalContact
+        contactclicked={contactclicked}
+        entered={entered}
+        contactclickedoff={contactclickedoff}
+      ></ModalContact>
+      <ModalProjets
+        projetsclicked={projetsclicked}
+        entered={entered}
+        projetsclickedoff={projetsclickedoff}
+      ></ModalProjets>
     </>
   );
 }
