@@ -29,7 +29,7 @@ const ModalContact = ({ contactclicked, entered, contactclickedoff }) => {
             >
               RELATION
             </TextyAnim>
-            <div className="descriptioncontainer">
+            <div className="descriptioncontainercontact">
               <TextyAnim
                 className="description"
                 type="mask-top"

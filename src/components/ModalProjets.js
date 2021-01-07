@@ -30,9 +30,9 @@ const ModalProjets = ({ projetsclicked, entered, projetsclickedoff }) => {
             >
               PROJETS
             </TextyAnim>
-            <div className="descriptioncontainer">
+            <div className="descriptioncontainerprojet">
               <TextyAnim
-                className="descriptionstack"
+                className="descriptionstackprojet"
                 type="right"
                 duration={(e) => {
                   if (e.index === 8) {
@@ -53,7 +53,7 @@ const ModalProjets = ({ projetsclicked, entered, projetsclickedoff }) => {
                 VINTED
               </TextyAnim>
               <TextyAnim
-                className="descriptionstack"
+                className="descriptionstackprojet"
                 type="right"
                 duration={(e) => {
                   if (e.index === 8) {
@@ -74,7 +74,7 @@ const ModalProjets = ({ projetsclicked, entered, projetsclickedoff }) => {
                 MARVEL
               </TextyAnim>
               <TextyAnim
-                className="descriptionstack"
+                className="descriptionstackprojet"
                 type="left"
                 duration={(e) => {
                   if (e.index === 8) {

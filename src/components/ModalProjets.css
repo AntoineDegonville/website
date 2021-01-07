@@ -32,22 +32,19 @@
     opacity: 1;
   }
 }
-.descriptioncontainer {
+.descriptioncontainerprojet {
   display: flex;
-  justify-content: space-around;
   width: 100%;
-  /* border: 2px solid green; */
+  justify-content: space-around;
 }
-.descriptionstack {
+.descriptionstackprojet {
   font-family: "Abel", sans-serif;
   font-size: 30px;
-  width: 200px;
-  padding-left: 20px;
   display: flex;
   justify-content: center;
-  /* border: 2px solid pink; */
+  margin-left: 70px;
 }
-.descriptionstack:hover {
+.descriptionstackprojet:hover {
   text-decoration: underline;
   cursor: pointer;
 }
