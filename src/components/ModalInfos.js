@@ -67,6 +67,7 @@ const ModalInfos = ({ infosclicked, entered, infosclickedoff }) => {
               <div className="contactme">
                 <a
                   target="_blank"
+                  rel="noreferrer"
                   href="mailto:antoinedegonville.pro@gmail.com"
                   className="contactmemail"
                 >
