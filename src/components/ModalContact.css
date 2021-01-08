@@ -35,10 +35,8 @@
 .descriptioncontainercontact {
   display: flex;
   width: 100%;
-  /* height: 30%; */
-  flex-direction: column;
-  justify-content: flex-end;
-  /* border: 2px solid green; */
+  justify-content: space-around;
+  align-items: center;
 }
 .description {
   font-family: "Abel", sans-serif;
@@ -72,4 +70,27 @@
   opacity: 1;
   font-size: 200px;
   font-family: "Abel", sans-serif;
+}
+
+.logolinkedin {
+  width: 80px;
+}
+
+.logoinstagram {
+  width: 80px;
+}
+.logogmail {
+  width: 90px;
+}
+.link {
+  z-index: 2;
+  cursor: pointer;
+}
+.link1 {
+  z-index: 2;
+  cursor: pointer;
+}
+.link2 {
+  z-index: 2;
+  cursor: pointer;
 }
