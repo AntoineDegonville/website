@@ -4,6 +4,7 @@ import TextyAnim from "rc-texty";
 import linkedin from "../assets/img/linkedin.png";
 import instagram from "../assets/img/instagram.svg";
 import gmail from "../assets/img/gmail.svg";
+import github from "../assets/img/github.png";
 
 const ModalContact = ({ contactclicked, entered, contactclickedoff }) => {
   return (
@@ -30,7 +31,8 @@ const ModalContact = ({ contactclicked, entered, contactclickedoff }) => {
                 // console.log(type);
               }}
             >
-              RELATION
+              {/* RELATION */}
+              NETWORK
             </TextyAnim>
             <div className="descriptioncontainercontact">
               <a
@@ -45,6 +47,14 @@ const ModalContact = ({ contactclicked, entered, contactclickedoff }) => {
                   className="logolinkedin"
                   src={linkedin}
                 ></img>
+              </a>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://github.com/AntoineDegonville"
+                className="link3"
+              >
+                <img alt="github" className="logogithub" src={github}></img>
               </a>
               <a
                 target="_blank"

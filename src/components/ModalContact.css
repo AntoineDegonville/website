@@ -82,6 +82,11 @@
 .logogmail {
   width: 90px;
 }
+.logogithub {
+  width: 90px;
+
+  border-radius: 10px;
+}
 .link {
   z-index: 2;
   cursor: pointer;
@@ -91,6 +96,10 @@
   cursor: pointer;
 }
 .link2 {
+  z-index: 2;
+  cursor: pointer;
+}
+.link3 {
   z-index: 2;
   cursor: pointer;
 }

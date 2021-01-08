@@ -76,3 +76,7 @@
   font-size: 200px;
   font-family: "Abel", sans-serif;
 }
+.linkcolor {
+  color: white;
+  text-decoration: unset;
+}

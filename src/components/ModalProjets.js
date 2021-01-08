@@ -28,72 +28,93 @@ const ModalProjets = ({ projetsclicked, entered, projetsclickedoff }) => {
                 // console.log(type);
               }}
             >
-              PROJETS
+              WORKS
             </TextyAnim>
             <div className="descriptioncontainerprojet">
-              <TextyAnim
-                className="descriptionstackprojet"
-                type="right"
-                duration={(e) => {
-                  if (e.index === 8) {
-                    return 800;
-                  }
-                  return 1000;
-                }}
-                interval={(e) => {
-                  if (e.index === 2) {
-                    return 500;
-                  }
-                  return e.index * 30;
-                }}
-                onEnd={(type) => {
-                  // console.log(type);
-                }}
+              <a
+                className="linkcolor"
+                target="_blank"
+                rel="noreferrer"
+                href="https://vintedclone.netlify.app/"
               >
-                VINTED
-              </TextyAnim>
-              <TextyAnim
-                className="descriptionstackprojet"
-                type="right"
-                duration={(e) => {
-                  if (e.index === 8) {
-                    return 800;
-                  }
-                  return 1000;
-                }}
-                interval={(e) => {
-                  if (e.index === 2) {
-                    return 500;
-                  }
-                  return e.index * 30;
-                }}
-                onEnd={(type) => {
-                  // console.log(type);
-                }}
+                <TextyAnim
+                  className="descriptionstackprojet"
+                  type="right"
+                  duration={(e) => {
+                    if (e.index === 8) {
+                      return 800;
+                    }
+                    return 1000;
+                  }}
+                  interval={(e) => {
+                    if (e.index === 2) {
+                      return 500;
+                    }
+                    return e.index * 30;
+                  }}
+                  onEnd={(type) => {
+                    // console.log(type);
+                  }}
+                >
+                  VINTED
+                </TextyAnim>
+              </a>
+              <a
+                className="linkcolor"
+                target="_blank"
+                rel="noreferrer"
+                href="https://usingapiofmarvel.netlify.app/"
               >
-                MARVEL
-              </TextyAnim>
-              <TextyAnim
-                className="descriptionstackprojet"
-                type="left"
-                duration={(e) => {
-                  if (e.index === 8) {
-                    return 800;
-                  }
-                  return 1000;
-                }}
-                interval={(e) => {
-                  if (e.index === 2) {
-                    return 500;
-                  }
-                  return e.index * 30;
-                }}
-                onEnd={(type) => {
-                  // console.log(type);
-                }}
+                <TextyAnim
+                  className="descriptionstackprojet"
+                  type="right"
+                  duration={(e) => {
+                    if (e.index === 8) {
+                      return 800;
+                    }
+                    return 1000;
+                  }}
+                  interval={(e) => {
+                    if (e.index === 2) {
+                      return 500;
+                    }
+                    return e.index * 30;
+                  }}
+                  onEnd={(type) => {
+                    // console.log(type);
+                  }}
+                >
+                  MARVEL
+                </TextyAnim>
+              </a>
+              <a
+                className="linkcolor"
+                target="_blank"
+                rel="noreferrer"
+                href="https://talkwithabot.netlify.app/"
               >
-                TALK WITH A BOT
-              </TextyAnim>
+                <TextyAnim
+                  className="descriptionstackprojet"
+                  type="left"
+                  duration={(e) => {
+                    if (e.index === 8) {
+                      return 800;
+                    }
+                    return 1000;
+                  }}
+                  interval={(e) => {
+                    if (e.index === 2) {
+                      return 500;
+                    }
+                    return e.index * 30;
+                  }}
+                  onEnd={(type) => {
+                    // console.log(type);
+                  }}
+                >
+                  TALK WITH A BOT
+                </TextyAnim>
+              </a>
             </div>
           </div>
         </>

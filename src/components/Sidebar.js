@@ -78,6 +78,23 @@ const Sidebar = ({
         </div>
       </div>
       <div className={opac ? "menu" : "invisible"}>
+        <div className={infos ? "menuinfosclicked" : "menuinfos"}>
+          <p
+            onClick={() => {
+              setInfosClicked(!infosclicked);
+              setInfosClickedOff(true);
+              setStackClicked(false);
+              setProjetsClicked(false);
+              setContactClicked(false);
+              setInfos(!infos);
+              setProjets(false);
+              setStack(false);
+              setContact(false);
+            }}
+          >
+            WHO AM i ?
+          </p>
+        </div>
         <div className={stack ? "menustackclicked" : "menustack"}>
           <p
             onClick={() => {
@@ -110,26 +127,10 @@ const Sidebar = ({
               setContact(false);
             }}
           >
-            PROJETS
+            PROJECTS
           </p>
         </div>
-        <div className={infos ? "menuinfosclicked" : "menuinfos"}>
-          <p
-            onClick={() => {
-              setInfosClicked(!infosclicked);
-              setInfosClickedOff(true);
-              setStackClicked(false);
-              setProjetsClicked(false);
-              setContactClicked(false);
-              setInfos(!infos);
-              setProjets(false);
-              setStack(false);
-              setContact(false);
-            }}
-          >
-            INFOS
-          </p>
-        </div>
+
         <div className={contact ? "menucontactclicked" : "menucontact"}>
           <p
             onClick={() => {
@@ -144,7 +145,7 @@ const Sidebar = ({
               setInfos(false);
             }}
           >
-            CONTACT
+            LINK
           </p>
         </div>
       </div>

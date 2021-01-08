@@ -13,7 +13,6 @@
   width: 68%;
   height: 80%;
   border-left: solid lightgray 1px;
-  /* top: 0; */
   color: white;
   display: flex;
   flex-direction: column;
@@ -32,9 +31,11 @@
     opacity: 1;
   }
 }
-.descriptioncontainer {
+.descriptioncontainerinfos {
   display: flex;
   width: 100%;
+  flex-direction: column;
+  z-index: 3;
 }
 .description {
   font-family: "Abel", sans-serif;
@@ -44,7 +45,6 @@
 }
 .offclick {
   width: 68%;
-  /* height: 80%; */
   border-left: solid lightgray 1px;
   top: 0;
   color: white;
@@ -69,4 +69,17 @@
   opacity: 1;
   font-size: 200px;
   font-family: "Abel", sans-serif;
+}
+.contactme {
+  margin-top: 40px;
+  font-family: "Abel", sans-serif;
+  font-size: 30px;
+  padding-left: 20px;
+  text-decoration: underline;
+}
+.contactmemail {
+  z-index: 99;
+  text-decoration: unset;
+  color: white;
+  cursor: pointer;
 }
