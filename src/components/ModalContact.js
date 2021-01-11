@@ -1,10 +1,6 @@
 import React from "react";
 import "./ModalContact.css";
 import TextyAnim from "rc-texty";
-import linkedin from "../assets/img/linkedin.png";
-import instagram from "../assets/img/instagram.svg";
-import gmail from "../assets/img/gmail.svg";
-import github from "../assets/img/github.png";
 
 const ModalContact = ({ contactclicked, entered, contactclickedoff }) => {
   return (
@@ -45,7 +41,7 @@ const ModalContact = ({ contactclicked, entered, contactclickedoff }) => {
                   alt="linkedin"
                   rel="noreferrer"
                   className="logolinkedin"
-                  src={linkedin}
+                  src="https://res.cloudinary.com/dta6lllnx/image/upload/v1610360435/linkedin_uhzsb0.png"
                 ></img>
               </a>
               <a
@@ -54,7 +50,11 @@ const ModalContact = ({ contactclicked, entered, contactclickedoff }) => {
                 href="https://github.com/AntoineDegonville"
                 className="link3"
               >
-                <img alt="github" className="logogithub" src={github}></img>
+                <img
+                  alt="github"
+                  className="logogithub"
+                  src="https://res.cloudinary.com/dta6lllnx/image/upload/v1610360435/github_fnywsc.png"
+                ></img>
               </a>
               <a
                 target="_blank"
@@ -65,7 +65,7 @@ const ModalContact = ({ contactclicked, entered, contactclickedoff }) => {
                 <img
                   alt="instagram"
                   className="logoinstagram"
-                  src={instagram}
+                  src="https://res.cloudinary.com/dta6lllnx/image/upload/v1610360436/instagram_kenwco.svg"
                 ></img>
               </a>
               <a
@@ -74,7 +74,11 @@ const ModalContact = ({ contactclicked, entered, contactclickedoff }) => {
                 href="mailto:antoinedegonville.pro@gmail.com"
                 className="link2"
               >
-                <img alt="gmail" className="logogmail" src={gmail}></img>
+                <img
+                  alt="gmail"
+                  className="logogmail"
+                  src="https://res.cloudinary.com/dta6lllnx/image/upload/v1610360435/gmail_gjinjn.svg"
+                ></img>
               </a>
             </div>
           </div>
