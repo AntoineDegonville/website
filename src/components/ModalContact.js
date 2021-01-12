@@ -9,8 +9,8 @@ const ModalContact = ({ contactclicked, entered, contactclickedoff }) => {
         <>
           <div className="canvas">
             <TextyAnim
-              className="text"
-              type="mask-bottom"
+              className="text4"
+              type="mask-top"
               duration={(e) => {
                 if (e.index === 8) {
                   return 1000;
@@ -65,7 +65,7 @@ const ModalContact = ({ contactclicked, entered, contactclickedoff }) => {
                 <img
                   alt="instagram"
                   className="logoinstagram"
-                  src="https://res.cloudinary.com/dta6lllnx/image/upload/v1610360436/instagram_kenwco.svg"
+                  src="https://res.cloudinary.com/dta6lllnx/image/upload/v1610458888/instameuj_fqf009.png"
                 ></img>
               </a>
               <a

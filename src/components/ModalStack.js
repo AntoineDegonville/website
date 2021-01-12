@@ -10,8 +10,8 @@ const ModalStack = ({ stackclicked, entered, stackclickedoff }) => {
         <>
           <div className="canvasstack">
             <TextyAnim
-              className="text"
-              type="mask-bottom"
+              className="text2"
+              type="mask-top"
               duration={(e) => {
                 if (e.index === 8) {
                   return 1000;

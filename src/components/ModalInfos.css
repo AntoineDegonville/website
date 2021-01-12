@@ -40,7 +40,8 @@
 .description {
   font-family: "Abel", sans-serif;
   font-size: 30px;
-  width: 500px;
+  /* width: 500px; */
+
   padding-left: 20px;
 }
 .offclick {
@@ -64,11 +65,13 @@
     opacity: 0;
   }
 }
-.text {
+.text1 {
   color: white;
+  width: 100%;
   opacity: 1;
   font-size: 200px;
   font-family: "Abel", sans-serif;
+  /* background-color: green; */
 }
 .contactme {
   margin-top: 40px;

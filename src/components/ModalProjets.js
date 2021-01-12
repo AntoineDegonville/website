@@ -10,8 +10,8 @@ const ModalProjets = ({ projetsclicked, entered, projetsclickedoff }) => {
         <>
           <div className="canvas">
             <TextyAnim
-              className="text"
-              type="mask-bottom"
+              className="text3"
+              type="left"
               duration={(e) => {
                 if (e.index === 8) {
                   return 1000;
@@ -31,6 +31,34 @@ const ModalProjets = ({ projetsclicked, entered, projetsclickedoff }) => {
               WORKS
             </TextyAnim>
             <div className="descriptioncontainerprojet">
+              <a
+                className="linkcolor"
+                target="_blank"
+                rel="noreferrer"
+                href="https://talkwithabot.netlify.app/"
+              >
+                <TextyAnim
+                  className="descriptionstackprojet"
+                  type="left"
+                  duration={(e) => {
+                    if (e.index === 8) {
+                      return 800;
+                    }
+                    return 1000;
+                  }}
+                  interval={(e) => {
+                    if (e.index === 2) {
+                      return 500;
+                    }
+                    return e.index * 30;
+                  }}
+                  onEnd={(type) => {
+                    // console.log(type);
+                  }}
+                >
+                  TALK WITH A BOT
+                </TextyAnim>
+              </a>
               <a
                 className="linkcolor"
                 target="_blank"
@@ -63,7 +91,7 @@ const ModalProjets = ({ projetsclicked, entered, projetsclickedoff }) => {
                 className="linkcolor"
                 target="_blank"
                 rel="noreferrer"
-                href="https://usingapiofmarvel.netlify.app/"
+                href="https://marvelfindyourcharacters.netlify.app/"
               >
                 <TextyAnim
                   className="descriptionstackprojet"
@@ -85,34 +113,6 @@ const ModalProjets = ({ projetsclicked, entered, projetsclickedoff }) => {
                   }}
                 >
                   MARVEL
-                </TextyAnim>
-              </a>
-              <a
-                className="linkcolor"
-                target="_blank"
-                rel="noreferrer"
-                href="https://talkwithabot.netlify.app/"
-              >
-                <TextyAnim
-                  className="descriptionstackprojet"
-                  type="left"
-                  duration={(e) => {
-                    if (e.index === 8) {
-                      return 800;
-                    }
-                    return 1000;
-                  }}
-                  interval={(e) => {
-                    if (e.index === 2) {
-                      return 500;
-                    }
-                    return e.index * 30;
-                  }}
-                  onEnd={(type) => {
-                    // console.log(type);
-                  }}
-                >
-                  TALK WITH A BOT
                 </TextyAnim>
               </a>
             </div>

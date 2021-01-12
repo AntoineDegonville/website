@@ -68,6 +68,9 @@ function App() {
             <p className="pythatext">
               "There is geometry in the humming of the strings, there is music
               in the spacing of the spheres."
+              <br />
+              <br />
+              Pythagore
             </p>
           </div>
         </div>

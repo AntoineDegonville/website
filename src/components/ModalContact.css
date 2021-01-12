@@ -21,6 +21,7 @@
   align-items: center;
   animation-name: border;
   animation-duration: 1s;
+  /* border: 2px solid red; */
 }
 @keyframes border {
   from {
@@ -41,7 +42,7 @@
 .description {
   font-family: "Abel", sans-serif;
   font-size: 30px;
-  width: 500px;
+  width: 40%;
   padding-left: 20px;
 }
 .offclick {
@@ -65,11 +66,13 @@
     opacity: 0;
   }
 }
-.text {
+.text4 {
   color: white;
   opacity: 1;
   font-size: 200px;
   font-family: "Abel", sans-serif;
+  display: flex;
+  justify-content: center;
 }
 
 .logolinkedin {

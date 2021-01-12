@@ -70,11 +70,13 @@
     opacity: 0;
   }
 }
-.text {
+.text3 {
   color: white;
   opacity: 1;
   font-size: 200px;
   font-family: "Abel", sans-serif;
+  display: flex;
+  justify-content: center;
 }
 .linkcolor {
   color: white;

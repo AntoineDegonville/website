@@ -66,9 +66,11 @@
     opacity: 0;
   }
 }
-.text {
+.text2 {
   color: white;
   opacity: 1;
   font-size: 200px;
   font-family: "Abel", sans-serif;
+  display: flex;
+  justify-content: center;
 }

@@ -9,7 +9,7 @@ const ModalInfos = ({ infosclicked, entered, infosclickedoff }) => {
         <>
           <div className="canvas">
             <TextyAnim
-              className="text"
+              className="text1"
               type="mask-bottom"
               duration={(e) => {
                 if (e.index === 8) {
