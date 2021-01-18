@@ -266,6 +266,21 @@
 }
 @media (max-width: 500px) {
   .leftsidebar {
-    width: 20%;
+    width: 25%;
+  }
+  .menucontact {
+    font-size: 18px;
+  }
+  .menuinfos {
+    font-size: 18px;
+  }
+  .menuprojetclicked {
+    font-size: 18px;
+  }
+  .menustack {
+    font-size: 18px;
+  }
+  .headername {
+    padding-left: 170px;
   }
 }

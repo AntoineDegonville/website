@@ -115,8 +115,12 @@
     font-size: 20px;
   }
 }
-@media (max-width: 510px) {
+@media (max-width: 500px) {
   .allscreencanvas {
-    margin-left: 29px;
+    padding-left: 52px;
+  }
+  .description {
+    /* border: 2px solid blue; */
+    width: 100%;
   }
 }

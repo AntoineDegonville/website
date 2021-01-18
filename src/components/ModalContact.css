@@ -122,16 +122,7 @@
 
 @media (max-width: 500px) {
   .descriptioncontainercontact {
-    /* border: 2px solid blue; */
     flex-direction: column;
-    /* margin: 20px; */
+    height: 60%;
   }
-  /* .logogithub {
-  }
-  .logoinstagram {
-  }
-  .logolinkedin {
-  }
-  .logogmail {
-  } */
 }
