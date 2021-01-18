@@ -3,7 +3,7 @@ import "./ModalProjets.css";
 import TextyAnim from "rc-texty";
 
 const ModalProjets = ({ projetsclicked, entered, projetsclickedoff }) => {
-  console.log(projetsclicked);
+  // console.log(projetsclicked);
   return (
     <div className="allscreencanvas">
       {projetsclicked ? (

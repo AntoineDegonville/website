@@ -3,7 +3,7 @@ import "./ModalStack.css";
 import TextyAnim from "rc-texty";
 
 const ModalStack = ({ stackclicked, entered, stackclickedoff }) => {
-  console.log(entered);
+  // console.log(entered);
   return (
     <div className="allscreencanvas">
       {stackclicked ? (

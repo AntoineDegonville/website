@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Sidebar from "./components/Sidebar";
 import ModalInfos from "./components/ModalInfos";
 import ModalStack from "./components/ModalStack";
@@ -14,7 +14,7 @@ import pad from "../src/assets/sounds/pad.mp3";
 function App() {
   const [opac, setOpac] = useState(false);
   const [video, setVideo] = useState();
-  const [videopytha, setVideoPytha] = useState();
+  const [videohome, setVideoHome] = useState();
   const [entered, setEntered] = useState(0);
   const [infosclicked, setInfosClicked] = useState(false);
   const [infosclickedoff, setInfosClickedOff] = useState(false);
@@ -24,6 +24,23 @@ function App() {
   const [contactclickedoff, setContactClickedOff] = useState(false);
   const [projetsclicked, setProjetsClicked] = useState(false);
   const [projetsclickedoff, setProjetsClickedOff] = useState(false);
+  const [videotoplay, setVideoToPlay] = useState();
+
+  const videoarr = [
+    "https://res.cloudinary.com/dta6lllnx/video/upload/v1610049300/PineSite_jdafms.mp4",
+    "https://res.cloudinary.com/dta6lllnx/video/upload/v1610994722/LOOP2_rifnvj.mp4",
+    "https://res.cloudinary.com/dta6lllnx/video/upload/v1610994706/LOOP1_hkk4ty.mp4",
+  ];
+
+  function random(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
+  }
+  useEffect(() => {
+    setVideoToPlay(videoarr[random(0, 2)]);
+    console.log(videoarr[random(0, 2)]);
+  }, []);
 
   let audiopad = new Audio(sound);
   let audioenter = new Audio(enter);
@@ -38,7 +55,7 @@ function App() {
             <p
               className="enter"
               onClick={() => {
-                videopytha.play();
+                videohome.play();
                 video.play();
                 audioenter.play();
                 audioenter.volume = 0.6;
@@ -97,11 +114,9 @@ function App() {
           projetsclicked={projetsclicked}
         ></Sidebar>
         <video
-          ref={(videoRef) => setVideoPytha(videoRef)}
+          ref={(videoRef) => setVideoHome(videoRef)}
           className={opac ? "videopine" : "videopineoff"}
-          src="https://res.cloudinary.com/dta6lllnx/video/upload/v1610049300/PineSite_jdafms.mp4"
-          // src="https://res.cloudinary.com/dta6lllnx/video/upload/v1610560701/Ruisselement_gj6pli.mp4"
-          // src="https://res.cloudinary.com/dta6lllnx/video/upload/v1610559812/ruisseau_okxvac.mp4"
+          src={videotoplay}
           type="video/mp4"
           height="100%"
           width="100%"
