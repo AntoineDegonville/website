@@ -26,21 +26,21 @@ function App() {
   const [projetsclickedoff, setProjetsClickedOff] = useState(false);
   const [videotoplay, setVideoToPlay] = useState();
 
-  const videoarr = [
-    "https://res.cloudinary.com/dta6lllnx/video/upload/v1610049300/PineSite_jdafms.mp4",
-    "https://res.cloudinary.com/dta6lllnx/video/upload/v1610994722/LOOP2_rifnvj.mp4",
-    "https://res.cloudinary.com/dta6lllnx/video/upload/v1610994706/LOOP1_hkk4ty.mp4",
-  ];
-
   function random(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
   }
-  const pushthegoodlink = () => {
-    setVideoToPlay(videoarr[random(0, 2)]);
-  };
+
   useEffect(() => {
+    const videoarr = [
+      "https://res.cloudinary.com/dta6lllnx/video/upload/v1610049300/PineSite_jdafms.mp4",
+      "https://res.cloudinary.com/dta6lllnx/video/upload/v1610994722/LOOP2_rifnvj.mp4",
+      "https://res.cloudinary.com/dta6lllnx/video/upload/v1610994706/LOOP1_hkk4ty.mp4",
+    ];
+    const pushthegoodlink = () => {
+      setVideoToPlay(videoarr[random(0, 2)]);
+    };
     pushthegoodlink();
   }, []);
 
