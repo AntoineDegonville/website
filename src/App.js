@@ -37,9 +37,11 @@ function App() {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
   }
-  useEffect(() => {
+  const pushthegoodlink = () => {
     setVideoToPlay(videoarr[random(0, 2)]);
-    console.log(videoarr[random(0, 2)]);
+  };
+  useEffect(() => {
+    pushthegoodlink();
   }, []);
 
   let audiopad = new Audio(sound);

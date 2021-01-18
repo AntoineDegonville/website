@@ -101,7 +101,6 @@
   right: 150px;
   animation-name: pytatext;
   animation-duration: 5s;
-  /* border: solid 2px blue; */
   margin-top: 20px;
 }
 @keyframes pytatext {
@@ -192,10 +191,9 @@
 
 @media (max-width: 500px) {
   .enter {
-    z-index: 10;
+    padding-left: 100px;
   }
   .containerpytha {
     display: none;
-    z-index: 0;
   }
 }
