@@ -1,14 +1,3 @@
-.allscreencanvas {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .canvasstack {
   margin-left: 20px;
   width: 68%;
@@ -73,4 +62,20 @@
   font-family: "Abel", sans-serif;
   display: flex;
   justify-content: center;
+}
+
+@media (max-width: 1260px) {
+  .descriptionstack {
+    font-size: 20px;
+  }
+  .text2 {
+    font-size: 50px;
+    padding-bottom: 20px;
+  }
+}
+@media (max-width: 500px) {
+  .descriptionstack {
+    flex-direction: column;
+    align-items: center;
+  }
 }

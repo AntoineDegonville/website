@@ -7,9 +7,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  /* border: 2px solid red; */
 }
 
 .canvas {
+  /* border: 2px solid green; */
+  /* margin-left: 20px; */
+  /* padding-left: 20px; */
+  /* border: 2px solid red; */
   width: 68%;
   height: 80%;
   border-left: solid lightgray 1px;
@@ -39,9 +44,8 @@
 }
 .description {
   font-family: "Abel", sans-serif;
+  width: 40%;
   font-size: 30px;
-  /* width: 500px; */
-
   padding-left: 20px;
 }
 .offclick {
@@ -71,7 +75,6 @@
   opacity: 1;
   font-size: 200px;
   font-family: "Abel", sans-serif;
-  /* background-color: green; */
 }
 .contactme {
   margin-top: 40px;
@@ -85,4 +88,35 @@
   text-decoration: unset;
   color: white;
   cursor: pointer;
+}
+@media (max-height: 750px) {
+  .text1 {
+    font-size: 100px;
+  }
+  .description {
+    font-size: 20px;
+  }
+  .contactme {
+    font-size: 20px;
+  }
+}
+@media (max-width: 1260px) {
+  .text1 {
+    font-size: 50px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+  }
+
+  .description {
+    width: 50%;
+    font-size: 20px;
+  }
+  .contactme {
+    font-size: 20px;
+  }
+}
+@media (max-width: 510px) {
+  .allscreencanvas {
+    margin-left: 29px;
+  }
 }

@@ -1,14 +1,3 @@
-.allscreencanvas {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .canvas {
   margin-left: 20px;
   width: 68%;
@@ -81,4 +70,30 @@
 .linkcolor {
   color: white;
   text-decoration: unset;
+}
+
+@media (max-width: 1260px) {
+  .text3 {
+    font-size: 50px;
+    padding-bottom: 20px;
+  }
+  .descriptionstackprojet {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .descriptionstackprojet {
+    font-size: 18px;
+    flex-direction: column;
+    align-items: center;
+
+    margin-left: -0px;
+  }
+  .text3 {
+    width: 100%;
+  }
+  .canvas {
+    justify-content: center;
+  }
 }

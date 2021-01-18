@@ -1,14 +1,3 @@
-.allscreencanvas {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .canvas {
   width: 68%;
   height: 80%;
@@ -21,7 +10,7 @@
   align-items: center;
   animation-name: border;
   animation-duration: 1s;
-  /* border: 2px solid red; */
+  background-color: #66000000;
 }
 @keyframes border {
   from {
@@ -39,7 +28,7 @@
   justify-content: space-around;
   align-items: center;
 }
-.description {
+.descriptioncontact {
   font-family: "Abel", sans-serif;
   font-size: 30px;
   width: 40%;
@@ -87,7 +76,6 @@
 }
 .logogithub {
   width: 90px;
-
   border-radius: 10px;
 }
 .link {
@@ -105,4 +93,45 @@
 .link3 {
   z-index: 2;
   cursor: pointer;
+}
+
+@media (max-width: 1260px) {
+  .text4 {
+    padding-left: 20px;
+    padding-bottom: 20px;
+    font-size: 50px;
+  }
+  .logolinkedin {
+    width: 50px;
+  }
+
+  .logoinstagram {
+    width: 50px;
+  }
+  .logogmail {
+    width: 55px;
+  }
+  .logogithub {
+    width: 55px;
+    border-radius: 10px;
+  }
+  .canvas {
+    height: 79%;
+  }
+}
+
+@media (max-width: 500px) {
+  .descriptioncontainercontact {
+    /* border: 2px solid blue; */
+    flex-direction: column;
+    /* margin: 20px; */
+  }
+  /* .logogithub {
+  }
+  .logoinstagram {
+  }
+  .logolinkedin {
+  }
+  .logogmail {
+  } */
 }

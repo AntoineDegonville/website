@@ -9,6 +9,7 @@ import pythagore from "../src/assets/video/Pytha360flip.mp4";
 import sound from "../src/assets/sounds/sound.mp3";
 import enter from "../src/assets/sounds/enter.mp3";
 import rainsound from "../src/assets/sounds/rain.mp3";
+import pad from "../src/assets/sounds/pad.mp3";
 
 function App() {
   const [opac, setOpac] = useState(false);
@@ -27,6 +28,7 @@ function App() {
   let audiopad = new Audio(sound);
   let audioenter = new Audio(enter);
   let audiorain = new Audio(rainsound);
+  let padhome = new Audio(pad);
 
   return (
     <>
@@ -50,7 +52,9 @@ function App() {
                   audiopad.volume = 0.8;
                   setTimeout(() => {
                     audiorain.play();
-                    audiorain.volume = 0.4;
+                    audiorain.volume = 0.2;
+                    padhome.play();
+                    padhome.loop = true;
                   }, 1500);
                 }, 2000);
               }}
@@ -70,7 +74,7 @@ function App() {
               in the spacing of the spheres."
               <br />
               <br />
-              Pythagore
+              Pythagoras
             </p>
           </div>
         </div>
@@ -96,6 +100,8 @@ function App() {
           ref={(videoRef) => setVideoPytha(videoRef)}
           className={opac ? "videopine" : "videopineoff"}
           src="https://res.cloudinary.com/dta6lllnx/video/upload/v1610049300/PineSite_jdafms.mp4"
+          // src="https://res.cloudinary.com/dta6lllnx/video/upload/v1610560701/Ruisselement_gj6pli.mp4"
+          // src="https://res.cloudinary.com/dta6lllnx/video/upload/v1610559812/ruisseau_okxvac.mp4"
           type="video/mp4"
           height="100%"
           width="100%"

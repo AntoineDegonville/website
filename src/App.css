@@ -189,3 +189,13 @@
   width: 100%;
   z-index: 3;
 }
+
+@media (max-width: 500px) {
+  .enter {
+    z-index: 10;
+  }
+  .containerpytha {
+    display: none;
+    z-index: 0;
+  }
+}
