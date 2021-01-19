@@ -8,8 +8,6 @@ import "./App.css";
 import pythagore from "../src/assets/video/Pytha360flip.mp4";
 import sound from "../src/assets/sounds/sound.mp3";
 import enter from "../src/assets/sounds/enter.mp3";
-import rainsound from "../src/assets/sounds/rain.mp3";
-import pad from "../src/assets/sounds/pad.mp3";
 
 function App() {
   const [opac, setOpac] = useState(false);
@@ -38,6 +36,7 @@ function App() {
       "https://res.cloudinary.com/dta6lllnx/video/upload/v1610994722/LOOP2_rifnvj.mp4",
       "https://res.cloudinary.com/dta6lllnx/video/upload/v1610994706/LOOP1_hkk4ty.mp4",
     ];
+
     const pushthegoodlink = () => {
       setVideoToPlay(videoarr[random(0, 2)]);
     };
@@ -46,8 +45,15 @@ function App() {
 
   let audiopad = new Audio(sound);
   let audioenter = new Audio(enter);
-  let audiorain = new Audio(rainsound);
-  let padhome = new Audio(pad);
+  let audiorain = new Audio(
+    "https://res.cloudinary.com/dta6lllnx/video/upload/v1611061427/PineSounds/rain_y67tdy.mp3"
+  );
+  let pinehome = new Audio(
+    "https://res.cloudinary.com/dta6lllnx/video/upload/v1611061427/PineSounds/pineloop_gjp1mp.mp3"
+  );
+  let pinepad = new Audio(
+    "https://res.cloudinary.com/dta6lllnx/video/upload/v1611061427/PineSounds/pinepad_l4h7d2.mp3"
+  );
 
   return (
     <>
@@ -61,8 +67,6 @@ function App() {
                 video.play();
                 audioenter.play();
                 audioenter.volume = 0.6;
-                audiorain.loop = true;
-                audiorain.volume = 0.7;
                 audioenter.volume = 1;
                 setEntered(1);
                 setTimeout(() => {
@@ -70,10 +74,18 @@ function App() {
                   audiopad.play();
                   audiopad.volume = 0.8;
                   setTimeout(() => {
-                    audiorain.play();
-                    audiorain.volume = 0.2;
-                    padhome.play();
-                    padhome.loop = true;
+                    if (
+                      videotoplay ===
+                      "https://res.cloudinary.com/dta6lllnx/video/upload/v1610049300/PineSite_jdafms.mp4"
+                    ) {
+                      // pinehome.play();
+                      // pinehome.loop = true;
+                      // pinepad.play();
+                      // pinepad.loop = true;
+                      // audiorain.play();
+                      // audiorain.volume = 0.3;
+                      // audiorain.loop = true;
+                    }
                   }, 1500);
                 }, 2000);
               }}
@@ -101,6 +113,7 @@ function App() {
 
       <div className="allscreen">
         <Sidebar
+          videotoplay={videotoplay}
           opac={opac}
           setInfosClicked={setInfosClicked}
           setInfosClickedOff={setInfosClickedOff}

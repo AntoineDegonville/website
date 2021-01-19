@@ -3,6 +3,7 @@ import TextyAnim from "rc-texty";
 import "../components/Sidebar.css";
 
 const Sidebar = ({
+  videotoplay,
   opac,
   setInfosClicked,
   setInfosClickedOff,
@@ -21,6 +22,19 @@ const Sidebar = ({
   const [projets, setProjets] = useState(false);
   const [infos, setInfos] = useState(false);
   const [contact, setContact] = useState(false);
+
+  let item1 = new Audio(
+    "https://res.cloudinary.com/dta6lllnx/video/upload/q_10/v1611061426/PineSounds/pineitem1_uwrbdd.mp3"
+  );
+  let item2 = new Audio(
+    "https://res.cloudinary.com/dta6lllnx/video/upload/q_10/v1611061427/PineSounds/pineitem2_yqhkzd.mp3"
+  );
+  let item3 = new Audio(
+    "https://res.cloudinary.com/dta6lllnx/video/upload/q_10/v1611061427/PineSounds/pineitem3_eucn60.mp3"
+  );
+  let item4 = new Audio(
+    "https://res.cloudinary.com/dta6lllnx/video/upload/q_10/v1611061427/PineSounds/pineitem4_asz1kd.mp3"
+  );
 
   return (
     <div className="leftsidebar">
@@ -90,6 +104,14 @@ const Sidebar = ({
               setProjets(false);
               setStack(false);
               setContact(false);
+              if (
+                !infosclicked &&
+                videotoplay ===
+                  "https://res.cloudinary.com/dta6lllnx/video/upload/v1610049300/PineSite_jdafms.mp4"
+              ) {
+                item1.volume = 0.6;
+                item1.play();
+              }
             }}
           >
             WHO AM i ?
@@ -107,6 +129,14 @@ const Sidebar = ({
               setProjets(false);
               setInfos(false);
               setContact(false);
+              if (
+                !stackclicked &&
+                videotoplay ===
+                  "https://res.cloudinary.com/dta6lllnx/video/upload/v1610049300/PineSite_jdafms.mp4"
+              ) {
+                item2.volume = 0.6;
+                item2.play();
+              }
             }}
             className="border"
           >
@@ -125,6 +155,14 @@ const Sidebar = ({
               setStack(false);
               setInfos(false);
               setContact(false);
+              if (
+                !projetsclicked &&
+                videotoplay ===
+                  "https://res.cloudinary.com/dta6lllnx/video/upload/v1610049300/PineSite_jdafms.mp4"
+              ) {
+                item3.volume = 0.6;
+                item3.play();
+              }
             }}
           >
             PROJECTS
@@ -143,6 +181,14 @@ const Sidebar = ({
               setProjets(false);
               setStack(false);
               setInfos(false);
+              if (
+                !contactclicked &&
+                videotoplay ===
+                  "https://res.cloudinary.com/dta6lllnx/video/upload/v1610049300/PineSite_jdafms.mp4"
+              ) {
+                item4.volume = 0.6;
+                item4.play();
+              }
             }}
           >
             LINK
