@@ -45,6 +45,7 @@ function App() {
 
   let audiopad = new Audio(sound);
   let audioenter = new Audio(enter);
+  //audio test
   let audiorain = new Audio(
     "https://res.cloudinary.com/dta6lllnx/video/upload/v1611061427/PineSounds/rain_y67tdy.mp3"
   );
