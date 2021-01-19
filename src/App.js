@@ -78,13 +78,13 @@ function App() {
                       videotoplay ===
                       "https://res.cloudinary.com/dta6lllnx/video/upload/v1610049300/PineSite_jdafms.mp4"
                     ) {
-                      // pinehome.play();
-                      // pinehome.loop = true;
-                      // pinepad.play();
-                      // pinepad.loop = true;
-                      // audiorain.play();
-                      // audiorain.volume = 0.3;
-                      // audiorain.loop = true;
+                      pinehome.play();
+                      pinehome.loop = true;
+                      pinepad.play();
+                      pinepad.loop = true;
+                      audiorain.play();
+                      audiorain.volume = 0.3;
+                      audiorain.loop = true;
                     }
                   }, 1500);
                 }, 2000);
