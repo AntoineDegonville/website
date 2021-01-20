@@ -109,7 +109,7 @@ const Sidebar = ({
                 videotoplay ===
                   "https://res.cloudinary.com/dta6lllnx/video/upload/v1610049300/PineSite_jdafms.mp4"
               ) {
-                item1.volume = 0.6;
+                item1.volume = 1;
                 item1.play();
               }
             }}
@@ -134,7 +134,7 @@ const Sidebar = ({
                 videotoplay ===
                   "https://res.cloudinary.com/dta6lllnx/video/upload/v1610049300/PineSite_jdafms.mp4"
               ) {
-                item2.volume = 0.6;
+                item2.volume = 1;
                 item2.play();
               }
             }}
@@ -160,7 +160,7 @@ const Sidebar = ({
                 videotoplay ===
                   "https://res.cloudinary.com/dta6lllnx/video/upload/v1610049300/PineSite_jdafms.mp4"
               ) {
-                item3.volume = 0.6;
+                item3.volume = 1;
                 item3.play();
               }
             }}
@@ -186,7 +186,7 @@ const Sidebar = ({
                 videotoplay ===
                   "https://res.cloudinary.com/dta6lllnx/video/upload/v1610049300/PineSite_jdafms.mp4"
               ) {
-                item4.volume = 0.6;
+                item4.volume = 1;
                 item4.play();
               }
             }}

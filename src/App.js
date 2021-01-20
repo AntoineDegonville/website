@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Cookies from "js-cookie";
 import Sidebar from "./components/Sidebar";
 import ModalInfos from "./components/ModalInfos";
 import ModalStack from "./components/ModalStack";
@@ -24,23 +25,32 @@ function App() {
   const [projetsclickedoff, setProjetsClickedOff] = useState(false);
   const [videotoplay, setVideoToPlay] = useState();
 
-  function random(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
-  }
-
   useEffect(() => {
-    const videoarr = [
-      "https://res.cloudinary.com/dta6lllnx/video/upload/v1610049300/PineSite_jdafms.mp4",
-      "https://res.cloudinary.com/dta6lllnx/video/upload/v1610994722/LOOP2_rifnvj.mp4",
-      "https://res.cloudinary.com/dta6lllnx/video/upload/v1610994706/LOOP1_hkk4ty.mp4",
-    ];
-
-    const pushthegoodlink = () => {
-      setVideoToPlay(videoarr[random(0, 2)]);
-    };
-    pushthegoodlink();
+    let maxCookieValue = 2,
+      initCookie = 0,
+      expirationDays = 1;
+    let cookieName = "Theme";
+    let getCookie = Cookies.get(cookieName);
+    if (getCookie == null) {
+      Cookies.set(cookieName, initCookie + 1, { expires: expirationDays });
+      setVideoToPlay(
+        "https://res.cloudinary.com/dta6lllnx/video/upload/v1610049300/PineSite_jdafms.mp4"
+      );
+      console.log("Pine", getCookie);
+    } else if (getCookie >= initCookie && getCookie < maxCookieValue) {
+      getCookie++;
+      Cookies.set(cookieName, getCookie, { expires: expirationDays });
+      setVideoToPlay(
+        "https://res.cloudinary.com/dta6lllnx/video/upload/v1610994722/LOOP2_rifnvj.mp4"
+      );
+      console.log("Sunset", getCookie);
+    } else if (getCookie >= maxCookieValue) {
+      Cookies.remove(cookieName);
+      setVideoToPlay(
+        "https://res.cloudinary.com/dta6lllnx/video/upload/v1610994706/LOOP1_hkk4ty.mp4"
+      );
+      console.log("Flowers", getCookie);
+    }
   }, []);
 
   let audiopad = new Audio(sound);
