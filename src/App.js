@@ -7,8 +7,6 @@ import ModalContact from "./components/ModalContact";
 import ModalProjets from "./components/ModalProjets";
 import "./App.css";
 import pythagore from "../src/assets/video/Pytha360flip.mp4";
-import sound from "../src/assets/sounds/sound.mp3";
-import enter from "../src/assets/sounds/enter.mp3";
 
 function App() {
   const [opac, setOpac] = useState(false);
@@ -24,18 +22,24 @@ function App() {
   const [projetsclicked, setProjetsClicked] = useState(false);
   const [projetsclickedoff, setProjetsClickedOff] = useState(false);
   const [videotoplay, setVideoToPlay] = useState();
+  const [theme, setTheme] = useState("");
 
   useEffect(() => {
+    // VARIABLES COOKIES
     let maxCookieValue = 2,
       initCookie = 0,
       expirationDays = 1;
     let cookieName = "Theme";
     let getCookie = Cookies.get(cookieName);
+
+    // COOKIES INITIALIZATION AND INCREMENT.
+
     if (getCookie == null) {
       Cookies.set(cookieName, initCookie + 1, { expires: expirationDays });
       setVideoToPlay(
         "https://res.cloudinary.com/dta6lllnx/video/upload/v1610049300/PineSite_jdafms.mp4"
       );
+      setTheme("pine");
       console.log("Pine", getCookie);
     } else if (getCookie >= initCookie && getCookie < maxCookieValue) {
       getCookie++;
@@ -43,27 +47,33 @@ function App() {
       setVideoToPlay(
         "https://res.cloudinary.com/dta6lllnx/video/upload/v1610994722/LOOP2_rifnvj.mp4"
       );
+      setTheme("sunset");
+
       console.log("Sunset", getCookie);
     } else if (getCookie >= maxCookieValue) {
       Cookies.remove(cookieName);
       setVideoToPlay(
         "https://res.cloudinary.com/dta6lllnx/video/upload/v1610994706/LOOP1_hkk4ty.mp4"
       );
+      setTheme("flowers");
+
       console.log("Flowers", getCookie);
     }
   }, []);
 
-  let audiopad = new Audio(sound);
-  let audioenter = new Audio(enter);
+  let audioenter = new Audio("");
+  if (theme === "pine") {
+    audioenter = new Audio(
+      "https://res.cloudinary.com/dta6lllnx/video/upload/v1611157419/PineSounds/enterbutton_meuhdw.mp3"
+    );
+  }
+
   //audio test
   let audiorain = new Audio(
-    "https://res.cloudinary.com/dta6lllnx/video/upload/v1611061427/PineSounds/rain_y67tdy.mp3"
+    "https://res.cloudinary.com/dta6lllnx/video/upload/v1611156225/PineSounds/rain_wq0gtk.mp3"
   );
   let pinehome = new Audio(
-    "https://res.cloudinary.com/dta6lllnx/video/upload/v1611061427/PineSounds/pineloop_gjp1mp.mp3"
-  );
-  let pinepad = new Audio(
-    "https://res.cloudinary.com/dta6lllnx/video/upload/v1611061427/PineSounds/pinepad_l4h7d2.mp3"
+    "https://res.cloudinary.com/dta6lllnx/video/upload/v1611156935/PineSounds/pineloop_nkzd3i.mp3"
   );
 
   return (
@@ -82,19 +92,13 @@ function App() {
                 setEntered(1);
                 setTimeout(() => {
                   setOpac(true);
-                  audiopad.play();
-                  audiopad.volume = 0.8;
                   setTimeout(() => {
-                    if (
-                      videotoplay ===
-                      "https://res.cloudinary.com/dta6lllnx/video/upload/v1610049300/PineSite_jdafms.mp4"
-                    ) {
+                    if (theme === "pine") {
+                      pinehome.volume = 0.8;
                       pinehome.play();
                       pinehome.loop = true;
-                      pinepad.play();
-                      pinepad.loop = true;
                       audiorain.play();
-                      audiorain.volume = 0.3;
+                      audiorain.volume = 0.08;
                       audiorain.loop = true;
                     }
                   }, 1500);
@@ -124,6 +128,7 @@ function App() {
 
       <div className="allscreen">
         <Sidebar
+          theme={theme}
           videotoplay={videotoplay}
           opac={opac}
           setInfosClicked={setInfosClicked}

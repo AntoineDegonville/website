@@ -87,6 +87,7 @@ const ModalProjets = ({ projetsclicked, entered, projetsclickedoff }) => {
                   VINTED
                 </TextyAnim>
               </a>
+
               <a
                 className="linkcolor"
                 target="_blank"

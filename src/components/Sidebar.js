@@ -3,6 +3,7 @@ import TextyAnim from "rc-texty";
 import "../components/Sidebar.css";
 
 const Sidebar = ({
+  theme,
   videotoplay,
   opac,
   setInfosClicked,
@@ -23,18 +24,25 @@ const Sidebar = ({
   const [infos, setInfos] = useState(false);
   const [contact, setContact] = useState(false);
 
-  let item1 = new Audio(
-    "https://res.cloudinary.com/dta6lllnx/video/upload/q_10/v1611061426/PineSounds/pineitem1_uwrbdd.mp3"
-  );
-  let item2 = new Audio(
-    "https://res.cloudinary.com/dta6lllnx/video/upload/q_10/v1611061427/PineSounds/pineitem2_yqhkzd.mp3"
-  );
-  let item3 = new Audio(
-    "https://res.cloudinary.com/dta6lllnx/video/upload/q_10/v1611061427/PineSounds/pineitem3_eucn60.mp3"
-  );
-  let item4 = new Audio(
-    "https://res.cloudinary.com/dta6lllnx/video/upload/q_10/v1611061427/PineSounds/pineitem4_asz1kd.mp3"
-  );
+  let item1 = new Audio("");
+  let item2 = new Audio("");
+  let item3 = new Audio("");
+  let item4 = new Audio("");
+
+  if (theme === "pine") {
+    item1 = new Audio(
+      "https://res.cloudinary.com/dta6lllnx/video/upload/q_10/v1611061426/PineSounds/pineitem1_uwrbdd.mp3"
+    );
+    item2 = new Audio(
+      "https://res.cloudinary.com/dta6lllnx/video/upload/q_10/v1611061427/PineSounds/pineitem2_yqhkzd.mp3"
+    );
+    item3 = new Audio(
+      "https://res.cloudinary.com/dta6lllnx/video/upload/q_10/v1611061427/PineSounds/pineitem3_eucn60.mp3"
+    );
+    item4 = new Audio(
+      "https://res.cloudinary.com/dta6lllnx/video/upload/q_10/v1611061427/PineSounds/pineitem4_asz1kd.mp3"
+    );
+  }
 
   return (
     <div className="leftsidebar">

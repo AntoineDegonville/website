@@ -34,8 +34,20 @@
   margin-left: 70px;
 }
 .descriptionstackprojet:hover {
+  border: 2px solid blue;
   text-decoration: underline;
   cursor: pointer;
+  animation-name: popproj;
+  animation-duration: 1s;
+  height: 200px;
+}
+@keyframes popproj {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 200px;
+  }
 }
 .offclick {
   margin-left: 20px;
@@ -96,4 +108,8 @@
   .canvas {
     justify-content: center;
   }
+}
+
+.aboutproject {
+  border: 2px solid red;
 }

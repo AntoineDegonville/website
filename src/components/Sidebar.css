@@ -263,6 +263,9 @@
   .leftsidebar {
     width: 15%;
   }
+  .headertitle {
+    display: none;
+  }
 }
 @media (max-width: 500px) {
   .leftsidebar {
