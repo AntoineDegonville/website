@@ -34,21 +34,21 @@
   margin-left: 70px;
 }
 .descriptionstackprojet:hover {
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   text-decoration: underline;
   cursor: pointer;
   animation-name: popproj;
   animation-duration: 1s;
-  height: 200px;
+  /* height: 200px; */
 }
-@keyframes popproj {
+/* @keyframes popproj {
   from {
     height: 0px;
   }
   to {
     height: 200px;
   }
-}
+} */
 .offclick {
   margin-left: 20px;
   width: 68%;

@@ -7,6 +7,10 @@ import ModalContact from "./components/ModalContact";
 import ModalProjets from "./components/ModalProjets";
 import "./App.css";
 import pythagore from "../src/assets/video/Pytha360flip.mp4";
+import birds from "../src/assets/sounds/sunset/loop.mp3";
+import chimes from "../src/assets/sounds/sunset/chimes.mp3";
+import marimba from "../src/assets/sounds/flowers/marimba.mp3";
+import vinyl from "../src/assets/sounds/flowers/vinyl.mp3";
 
 function App() {
   const [opac, setOpac] = useState(false);
@@ -68,13 +72,19 @@ function App() {
     );
   }
 
-  //audio test
+  //audio pine
   let audiorain = new Audio(
     "https://res.cloudinary.com/dta6lllnx/video/upload/v1611156225/PineSounds/rain_wq0gtk.mp3"
   );
   let pinehome = new Audio(
     "https://res.cloudinary.com/dta6lllnx/video/upload/v1611156935/PineSounds/pineloop_nkzd3i.mp3"
   );
+  // audio sunset
+  let audiobird = new Audio(birds);
+  let chimeshome = new Audio(chimes);
+  // audio flowers
+  let marimbahome = new Audio(marimba);
+  let audiovinyl = new Audio(vinyl);
 
   return (
     <>
@@ -100,6 +110,22 @@ function App() {
                       audiorain.play();
                       audiorain.volume = 0.08;
                       audiorain.loop = true;
+                    }
+                    if (theme === "sunset") {
+                      chimeshome.volume = 1;
+                      chimeshome.play();
+                      chimeshome.loop = true;
+                      audiobird.play();
+                      audiobird.volume = 0.08;
+                      audiobird.loop = true;
+                    }
+                    if (theme === "flowers") {
+                      marimbahome.volume = 0.4;
+                      marimbahome.play();
+                      marimbahome.loop = true;
+                      audiovinyl.play();
+                      audiovinyl.volume = 0.08;
+                      audiovinyl.loop = true;
                     }
                   }, 1500);
                 }, 2000);
