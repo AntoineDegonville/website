@@ -7,10 +7,6 @@ import ModalContact from "./components/ModalContact";
 import ModalProjets from "./components/ModalProjets";
 import "./App.css";
 import pythagore from "../src/assets/video/Pytha360flip.mp4";
-import birds from "../src/assets/sounds/sunset/loop.mp3";
-import chimes from "../src/assets/sounds/sunset/chimes.mp3";
-import marimba from "../src/assets/sounds/flowers/marimba.mp3";
-import vinyl from "../src/assets/sounds/flowers/vinyl.mp3";
 
 function App() {
   const [opac, setOpac] = useState(false);
@@ -97,8 +93,12 @@ function App() {
     "https://res.cloudinary.com/dta6lllnx/video/upload/v1611225934/SummerSounds/chimes_z2klau.mp3"
   );
   // audio flowers
-  let marimbahome = new Audio(marimba);
-  let audiovinyl = new Audio(vinyl);
+  let marimbahome = new Audio(
+    "https://res.cloudinary.com/dta6lllnx/video/upload/v1611244928/FlowerSounds/marimba_oysqpi.mp3"
+  );
+  let audiovinyl = new Audio(
+    "https://res.cloudinary.com/dta6lllnx/video/upload/v1611244930/FlowerSounds/vinyl_aq3r8t.mp3"
+  );
 
   return (
     <>
