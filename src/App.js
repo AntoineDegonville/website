@@ -40,7 +40,6 @@ function App() {
         "https://res.cloudinary.com/dta6lllnx/video/upload/v1610049300/PineSite_jdafms.mp4"
       );
       setTheme("pine");
-      console.log("Pine", getCookie);
     } else if (getCookie >= initCookie && getCookie < maxCookieValue) {
       getCookie++;
       Cookies.set(cookieName, getCookie, { expires: expirationDays });
@@ -48,16 +47,12 @@ function App() {
         "https://res.cloudinary.com/dta6lllnx/video/upload/v1610994722/LOOP2_rifnvj.mp4"
       );
       setTheme("sunset");
-
-      console.log("Sunset", getCookie);
     } else if (getCookie >= maxCookieValue) {
       Cookies.remove(cookieName);
       setVideoToPlay(
         "https://res.cloudinary.com/dta6lllnx/video/upload/v1610994706/LOOP1_hkk4ty.mp4"
       );
       setTheme("flowers");
-
-      console.log("Flowers", getCookie);
     }
   }, []);
 
