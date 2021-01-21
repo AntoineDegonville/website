@@ -68,7 +68,17 @@ function App() {
   let audioenter = new Audio("");
   if (theme === "pine") {
     audioenter = new Audio(
-      "https://res.cloudinary.com/dta6lllnx/video/upload/v1611157419/PineSounds/enterbutton_meuhdw.mp3"
+      "https://res.cloudinary.com/dta6lllnx/video/upload/v1611244385/PineSounds/entertrue_qs0o0w.mp3"
+    );
+  }
+  if (theme === "sunset") {
+    audioenter = new Audio(
+      "https://res.cloudinary.com/dta6lllnx/video/upload/v1611243838/SummerSounds/enterflower_rracl9.mp3"
+    );
+  }
+  if (theme === "flowers") {
+    audioenter = new Audio(
+      "https://res.cloudinary.com/dta6lllnx/video/upload/v1611244204/FlowerSounds/enterflower_iohjq2.mp3"
     );
   }
 
@@ -108,7 +118,7 @@ function App() {
                       pinehome.play();
                       pinehome.loop = true;
                       audiorain.play();
-                      audiorain.volume = 0.08;
+                      audiorain.volume = 0.04;
                       audiorain.loop = true;
                     }
                     if (theme === "sunset") {
