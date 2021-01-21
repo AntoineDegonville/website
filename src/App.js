@@ -126,7 +126,7 @@ function App() {
                       audiorain.loop = true;
                     }
                     if (theme === "sunset") {
-                      chimeshome.volume = 1;
+                      chimeshome.volume = 0.5;
                       chimeshome.play();
                       chimeshome.loop = true;
                       audiobird.play();
