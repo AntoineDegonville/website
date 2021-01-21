@@ -90,7 +90,9 @@ function App() {
     "https://res.cloudinary.com/dta6lllnx/video/upload/v1611156935/PineSounds/pineloop_nkzd3i.mp3"
   );
   // audio sunset
-  let audiobird = new Audio(birds);
+  let audiobird = new Audio(
+    "https://res.cloudinary.com/dta6lllnx/video/upload/v1611225925/SummerSounds/loop_kjbyk4.mp3"
+  );
   let chimeshome = new Audio(chimes);
   // audio flowers
   let marimbahome = new Audio(marimba);
