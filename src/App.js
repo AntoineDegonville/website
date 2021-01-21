@@ -93,7 +93,9 @@ function App() {
   let audiobird = new Audio(
     "https://res.cloudinary.com/dta6lllnx/video/upload/v1611225925/SummerSounds/loop_kjbyk4.mp3"
   );
-  let chimeshome = new Audio(chimes);
+  let chimeshome = new Audio(
+    "https://res.cloudinary.com/dta6lllnx/video/upload/v1611225934/SummerSounds/chimes_z2klau.mp3"
+  );
   // audio flowers
   let marimbahome = new Audio(marimba);
   let audiovinyl = new Audio(vinyl);
