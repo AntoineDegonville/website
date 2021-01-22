@@ -63,7 +63,7 @@ const ModalProjets = ({ projetsclicked, entered, projetsclickedoff }) => {
                 className="linkcolor"
                 target="_blank"
                 rel="noreferrer"
-                href="https://vintedclone.netlify.app/"
+                href="https://vintedclone.netlify.app/home"
               >
                 <TextyAnim
                   className="descriptionstackprojet"
