@@ -49,20 +49,13 @@ const ModalInfos = ({ infosclicked, entered, infosclickedoff }) => {
                   // console.log(type);
                 }}
               >
-                {/* Après plusieurs années passées à étudier, pratiquer, puis
-                enseigner les musiques électroniques, ses machines et logiciels,
-                je souhaite aujourd’hui passer du côté technique de
-                l’informatique. Lors de ma récente formation de développeur web,
-                l’aisance avec laquelle j’ai appréhendé ces nouveaux concepts a
-                confirmé que ce métier est fait pour moi. J’ai maintenant hâte
-                de mettre mes compétences au service d’une équipe pour continuer
-                de progresser. */}
-                After many years of learning, practicing and teaching
-                electronics musics, those softwares and machines. Now, I would
-                like to go to the technical side. Since my recent formation of
-                full stack web developper, the ease which I learned new concepts
-                corroborate that this job is made for me. I would like to put my
-                skills at the service of a project.
+                My name is Antoine Degonville, I am a FullStack Développer MERN
+                (mongoDB, Express, React, NodeJS). Lover of Do It Yourself and
+                autonomous learning I recently be formed by the school Le
+                Reacteur in Paris. I have always been passionate by the digital
+                environment. I am also a multidisciplinary artist : electronic
+                musician, graphic designer and painter. The creative process is
+                the foundation of what I am and what I like.
               </TextyAnim>
               <div className="contactme">
                 <a

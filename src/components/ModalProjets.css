@@ -84,6 +84,15 @@
   text-decoration: unset;
 }
 
+@media (max-width: 1500px) {
+  .text3 {
+    font-size: 150px;
+    padding-bottom: 20px;
+  }
+  .descriptionstackprojet {
+    font-size: 20px;
+  }
+}
 @media (max-width: 1260px) {
   .text3 {
     font-size: 50px;

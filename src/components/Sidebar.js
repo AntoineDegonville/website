@@ -4,7 +4,6 @@ import "../components/Sidebar.css";
 
 const Sidebar = ({
   theme,
-  videotoplay,
   opac,
   setInfosClicked,
   setInfosClickedOff,
@@ -24,11 +23,12 @@ const Sidebar = ({
   const [infos, setInfos] = useState(false);
   const [contact, setContact] = useState(false);
 
+  // ITEM SOUND INITIALIZATION
   let item1 = new Audio("");
   let item2 = new Audio("");
   let item3 = new Audio("");
   let item4 = new Audio("");
-  // ITEM SOUND INITIALIZATION
+
   // PINE
   if (theme === "pine") {
     item1 = new Audio(
