@@ -27,7 +27,7 @@ const ModalInfos = ({ infosclicked, entered, infosclickedoff }) => {
                 // console.log(type);
               }}
             >
-              MOTIVATION RIGOR
+              CREATIVE / CURIOUS
             </TextyAnim>
             <div className="descriptioncontainerinfos">
               <TextyAnim
