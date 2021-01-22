@@ -8,6 +8,8 @@
 ## Website
 - https://antoinedegonville.netlify.app/
 
+You can reload the page for another experience...
+
 ## Packages
 - react 
 - react-dom
@@ -16,8 +18,10 @@
 - styled-off-canvas
 - cloudinary
 - rc-texty
+- js-cookie
 
 ## Languages
-- JavaScript
+- React
+- JSX
 - HTML
 - CSS
