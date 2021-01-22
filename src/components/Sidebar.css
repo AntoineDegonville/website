@@ -254,6 +254,10 @@
 .reload {
   font-size: 14px;
 }
+.reloadclick {
+  color: white;
+  text-decoration: inherit;
+}
 
 /* --------------------------------- */
 
