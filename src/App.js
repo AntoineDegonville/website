@@ -24,6 +24,7 @@ function App() {
   const [videotoplay, setVideoToPlay] = useState();
   const [theme, setTheme] = useState("");
 
+  // Check
   useEffect(() => {
     // VARIABLES COOKIES
     let maxCookieValue = 2,
