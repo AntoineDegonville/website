@@ -51,7 +51,7 @@ const ModalInfos = ({ infosclicked, entered, infosclickedoff }) => {
               >
                 My name is Antoine Degonville, I am a FullStack Développer MERN
                 (mongoDB, Express, React, NodeJS). Lover of Do It Yourself and
-                autonomous learning I recently be formed by the school Le
+                autonomous learning I was recently formed by the school Le
                 Reacteur in Paris. I have always been passionate by the digital
                 environment. I am also a multidisciplinary artist : electronic
                 musician, graphic designer and painter. The creative process is
