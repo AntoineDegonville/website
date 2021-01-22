@@ -251,6 +251,9 @@
 .invisible {
   display: none;
 }
+.reload {
+  font-size: 14px;
+}
 
 /* --------------------------------- */
 

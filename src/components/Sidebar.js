@@ -128,6 +128,7 @@ const Sidebar = ({
             </TextyAnim>
           ) : null}
         </div>
+        <div className="reload">Reload the page for another experience.</div>
       </div>
       <div className={opac ? "menu" : "invisible"}>
         <div className={infos ? "menuinfosclicked" : "menuinfos"}>
