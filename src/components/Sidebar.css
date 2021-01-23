@@ -252,6 +252,7 @@
   display: none;
 }
 .reload {
+  margin-top: 15px;
   font-size: 14px;
 }
 .reloadclick {
@@ -292,5 +293,9 @@
   }
   .headername {
     padding-left: 170px;
+  }
+  .reload {
+    margin-top: 15px;
+    font-size: 11px;
   }
 }
