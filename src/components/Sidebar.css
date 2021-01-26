@@ -253,7 +253,7 @@
 }
 .reload {
   margin-top: 15px;
-  font-size: 14px;
+  font-size: 12px;
 }
 .reloadclick {
   color: white;
@@ -261,6 +261,11 @@
 }
 
 /* --------------------------------- */
+@media (max-width: 1500px) {
+  .reload {
+    font-size: 10px;
+  }
+}
 
 @media (max-width: 1260px) {
   .headername {
@@ -273,6 +278,9 @@
   }
   .headertitle {
     display: none;
+  }
+  .reload {
+    font-size: 11px;
   }
 }
 @media (max-width: 500px) {
