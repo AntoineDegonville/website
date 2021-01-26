@@ -35,7 +35,7 @@ const ModalProjets = ({ projetsclicked, entered, projetsclickedoff }) => {
                 className="linkcolor"
                 target="_blank"
                 rel="noreferrer"
-                href="https://talkwithabot.netlify.app/"
+                href="https://chatwithhumans.netlify.app/"
               >
                 <TextyAnim
                   className="descriptionstackprojet"
@@ -56,7 +56,7 @@ const ModalProjets = ({ projetsclicked, entered, projetsclickedoff }) => {
                     // console.log(type);
                   }}
                 >
-                  TALK WITH A BOT
+                  TALK WITH HUMANS
                 </TextyAnim>
               </a>
               <a
