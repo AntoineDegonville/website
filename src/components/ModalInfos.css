@@ -81,13 +81,21 @@
   font-family: "Abel", sans-serif;
   font-size: 30px;
   padding-left: 20px;
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 .contactmemail {
   z-index: 99;
   text-decoration: unset;
   color: white;
   cursor: pointer;
+}
+
+.m-10 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.underline {
+  text-decoration: underline;
 }
 @media (max-height: 750px) {
   .text1 {

@@ -1,6 +1,7 @@
 import React from "react";
 import "./ModalInfos.css";
 import TextyAnim from "rc-texty";
+import CV from "../assets/cv/CVAntoineDegonville.pdf";
 
 const ModalInfos = ({ infosclicked, entered, infosclickedoff }) => {
   return (
@@ -58,14 +59,22 @@ const ModalInfos = ({ infosclicked, entered, infosclickedoff }) => {
                 foundation of what I am and what I like.
               </TextyAnim>
               <div className="contactme">
-                <a
-                  target="_blank"
-                  rel="noreferrer"
-                  href="mailto:antoinedegonville.pro@gmail.com"
-                  className="contactmemail"
-                >
-                  Contact Me
-                </a>
+                <span className="underline">
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="mailto:antoinedegonville.pro@gmail.com"
+                    className="contactmemail"
+                  >
+                    Contact Me
+                  </a>
+                </span>
+                <span className="m-10"> /</span>
+                <span className="underline">
+                  <a href={CV} className="contactmemail" download>
+                    CV
+                  </a>
+                </span>
               </div>
             </div>
           </div>
