@@ -92,7 +92,7 @@ const ModalStack = ({ stackclicked, entered, stackclickedoff }) => {
                   // console.log(type);
                 }}
               >
-                EXPRESS / AXIOS
+                AXIOS / EXPRESS
               </TextyAnim>
               <TextyAnim
                 className="descriptionstack"
@@ -113,7 +113,7 @@ const ModalStack = ({ stackclicked, entered, stackclickedoff }) => {
                   // console.log(type);
                 }}
               >
-                HEROKU / MONGODB
+                NETLIFY / HEROKU / MONGODB
               </TextyAnim>
             </div>
           </div>
