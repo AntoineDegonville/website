@@ -1,7 +1,7 @@
 import React from "react";
 import "./ModalInfos.css";
 import TextyAnim from "rc-texty";
-import CV from "../assets/cv/CVAntoineDegonville.pdf";
+import CV from "../assets/cv/AntoineDegonvilleDev.pdf";
 
 const ModalInfos = ({ infosclicked, entered, infosclickedoff }) => {
   return (
