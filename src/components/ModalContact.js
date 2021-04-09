@@ -41,7 +41,7 @@ const ModalContact = ({ contactclicked, entered, contactclickedoff }) => {
                   alt="linkedin"
                   rel="noreferrer"
                   className="logolinkedin"
-                  src="https://res.cloudinary.com/dta6lllnx/image/upload/v1610360435/linkedin_uhzsb0.png"
+                  src="https://res.cloudinary.com/dlmhpqesp/image/upload/v1617966397/WebSite/Logo/linkedin_zbnhxp.png"
                 ></img>
               </a>
               <a
@@ -53,7 +53,7 @@ const ModalContact = ({ contactclicked, entered, contactclickedoff }) => {
                 <img
                   alt="github"
                   className="logogithub"
-                  src="https://res.cloudinary.com/dta6lllnx/image/upload/v1610360435/github_fnywsc.png"
+                  src="https://res.cloudinary.com/dlmhpqesp/image/upload/v1617966397/WebSite/Logo/github_d3ecxb.png"
                 ></img>
               </a>
               <a
@@ -65,7 +65,7 @@ const ModalContact = ({ contactclicked, entered, contactclickedoff }) => {
                 <img
                   alt="instagram"
                   className="logoinstagram"
-                  src="https://res.cloudinary.com/dta6lllnx/image/upload/v1610458888/instameuj_fqf009.png"
+                  src="https://res.cloudinary.com/dlmhpqesp/image/upload/v1617966399/WebSite/Logo/instagram_j3nqbv.svg"
                 ></img>
               </a>
               <a
@@ -77,7 +77,7 @@ const ModalContact = ({ contactclicked, entered, contactclickedoff }) => {
                 <img
                   alt="gmail"
                   className="logogmail"
-                  src="https://res.cloudinary.com/dta6lllnx/image/upload/v1610360435/gmail_gjinjn.svg"
+                  src="https://res.cloudinary.com/dlmhpqesp/image/upload/v1617966471/WebSite/Logo/gmail_cp5u5i.svg"
                 ></img>
               </a>
             </div>

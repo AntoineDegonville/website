@@ -32,46 +32,46 @@ const Sidebar = ({
   // PINE
   if (theme === "pine") {
     item1 = new Audio(
-      "https://res.cloudinary.com/dta6lllnx/video/upload/q_10/v1611061426/PineSounds/pineitem1_uwrbdd.mp3"
+      "https://res.cloudinary.com/dlmhpqesp/video/upload/v1617962985/WebSite/pineitem1_amtfkx.mp3"
     );
     item2 = new Audio(
-      "https://res.cloudinary.com/dta6lllnx/video/upload/q_10/v1611061427/PineSounds/pineitem2_yqhkzd.mp3"
+      "https://res.cloudinary.com/dlmhpqesp/video/upload/v1617962986/WebSite/pineitem2_o0jwzg.mp3"
     );
     item3 = new Audio(
-      "https://res.cloudinary.com/dta6lllnx/video/upload/q_10/v1611061427/PineSounds/pineitem3_eucn60.mp3"
+      "https://res.cloudinary.com/dlmhpqesp/video/upload/v1617962986/WebSite/pineitem3_bhma3r.mp3"
     );
     item4 = new Audio(
-      "https://res.cloudinary.com/dta6lllnx/video/upload/q_10/v1611061427/PineSounds/pineitem4_asz1kd.mp3"
+      "https://res.cloudinary.com/dlmhpqesp/video/upload/v1617962986/WebSite/pineitem4_i0mwe2.mp3"
     );
   }
   //FLOWERS
   if (theme === "flowers") {
     item1 = new Audio(
-      "https://res.cloudinary.com/dta6lllnx/video/upload/v1611242560/FlowerSounds/item3_rqb5wu.mp3"
+      "https://res.cloudinary.com/dlmhpqesp/video/upload/v1617964003/WebSite/FlowersSound/item1_ffpimd.mp3"
     );
     item2 = new Audio(
-      "https://res.cloudinary.com/dta6lllnx/video/upload/v1611242560/FlowerSounds/item4_m7dqit.mp3"
+      "https://res.cloudinary.com/dlmhpqesp/video/upload/v1617964003/WebSite/FlowersSound/item2_k4xb7h.mp3"
     );
     item3 = new Audio(
-      "https://res.cloudinary.com/dta6lllnx/video/upload/v1611242560/FlowerSounds/item2_zh4m74.mp3"
+      "https://res.cloudinary.com/dlmhpqesp/video/upload/v1617964003/WebSite/FlowersSound/item3_tw5nbu.mp3"
     );
     item4 = new Audio(
-      "https://res.cloudinary.com/dta6lllnx/video/upload/v1611242560/FlowerSounds/item1_v7p72m.mp3"
+      "https://res.cloudinary.com/dlmhpqesp/video/upload/v1617964003/WebSite/FlowersSound/item4_i089fw.mp3"
     );
   }
   // SUNSET
   if (theme === "sunset") {
     item1 = new Audio(
-      "https://res.cloudinary.com/dta6lllnx/video/upload/v1611243449/SummerSounds/item1_xbpufr.mp3"
+      "https://res.cloudinary.com/dlmhpqesp/video/upload/v1617965443/WebSite/SunsetSound/item1_rchd3f.mp3"
     );
     item2 = new Audio(
-      "https://res.cloudinary.com/dta6lllnx/video/upload/v1611243449/SummerSounds/item2_lh2m0g.mp3"
+      "https://res.cloudinary.com/dlmhpqesp/video/upload/v1617965443/WebSite/SunsetSound/item2_p4dxwb.mp3"
     );
     item3 = new Audio(
-      "https://res.cloudinary.com/dta6lllnx/video/upload/v1611243449/SummerSounds/item3_ss7bka.mp3"
+      "https://res.cloudinary.com/dlmhpqesp/video/upload/v1617965443/WebSite/SunsetSound/item3_bz13jj.mp3"
     );
     item4 = new Audio(
-      "https://res.cloudinary.com/dta6lllnx/video/upload/v1611243449/SummerSounds/item4_jsgkn4.mp3"
+      "https://res.cloudinary.com/dlmhpqesp/video/upload/v1617965443/WebSite/SunsetSound/item4_utxqtw.mp3"
     );
   }
   return (

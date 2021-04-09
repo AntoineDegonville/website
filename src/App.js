@@ -38,20 +38,20 @@ function App() {
     if (getCookie == null) {
       Cookies.set(cookieName, initCookie + 1, { expires: expirationDays });
       setVideoToPlay(
-        "https://res.cloudinary.com/dta6lllnx/video/upload/v1610049300/PineSite_jdafms.mp4"
+        "https://res.cloudinary.com/dlmhpqesp/video/upload/v1617960924/WebSite/PineSite_x4fhhd.mp4"
       );
       setTheme("pine");
     } else if (getCookie >= initCookie && getCookie < maxCookieValue) {
       getCookie++;
       Cookies.set(cookieName, getCookie, { expires: expirationDays });
       setVideoToPlay(
-        "https://res.cloudinary.com/dta6lllnx/video/upload/v1610994722/LOOP2_rifnvj.mp4"
+        "https://res.cloudinary.com/dlmhpqesp/video/upload/v1617966960/WebSite/SunsetMovie_jkxafo.mp4"
       );
       setTheme("sunset");
     } else if (getCookie >= maxCookieValue) {
       Cookies.remove(cookieName);
       setVideoToPlay(
-        "https://res.cloudinary.com/dta6lllnx/video/upload/v1610994706/LOOP1_hkk4ty.mp4"
+        "https://res.cloudinary.com/dlmhpqesp/video/upload/v1617962699/WebSite/Flowers_bx52yh.mp4"
       );
       setTheme("flowers");
     }
@@ -60,40 +60,40 @@ function App() {
   let audioenter = new Audio("");
   if (theme === "pine") {
     audioenter = new Audio(
-      "https://res.cloudinary.com/dta6lllnx/video/upload/v1611244385/PineSounds/entertrue_qs0o0w.mp3"
+      "https://res.cloudinary.com/dlmhpqesp/video/upload/v1617963015/WebSite/enterbutton_vua230.mp3"
     );
   }
   if (theme === "sunset") {
     audioenter = new Audio(
-      "https://res.cloudinary.com/dta6lllnx/video/upload/v1611243838/SummerSounds/enterflower_rracl9.mp3"
+      "https://res.cloudinary.com/dlmhpqesp/video/upload/v1617965838/WebSite/SunsetSound/SunsetEnter_isuicd.mp3"
     );
   }
   if (theme === "flowers") {
     audioenter = new Audio(
-      "https://res.cloudinary.com/dta6lllnx/video/upload/v1611244204/FlowerSounds/enterflower_iohjq2.mp3"
+      "https://res.cloudinary.com/dlmhpqesp/video/upload/v1617964003/WebSite/FlowersSound/enterflower_icgtiw.mp3"
     );
   }
 
   //audio pine
   let audiorain = new Audio(
-    "https://res.cloudinary.com/dta6lllnx/video/upload/v1611156225/PineSounds/rain_wq0gtk.mp3"
+    "https://res.cloudinary.com/dlmhpqesp/video/upload/v1617963106/WebSite/rain_laiwus.mp3"
   );
   let pinehome = new Audio(
-    "https://res.cloudinary.com/dta6lllnx/video/upload/v1611156935/PineSounds/pineloop_nkzd3i.mp3"
+    "https://res.cloudinary.com/dlmhpqesp/video/upload/v1617963074/WebSite/pineloop_g4cuwh.mp3"
   );
   // audio sunset
   let audiobird = new Audio(
-    "https://res.cloudinary.com/dta6lllnx/video/upload/v1611225925/SummerSounds/loop_kjbyk4.mp3"
+    "https://res.cloudinary.com/dlmhpqesp/video/upload/v1617965446/WebSite/SunsetSound/loop_bvfves.mp3"
   );
   let chimeshome = new Audio(
-    "https://res.cloudinary.com/dta6lllnx/video/upload/v1611225934/SummerSounds/chimes_z2klau.mp3"
+    "https://res.cloudinary.com/dlmhpqesp/video/upload/v1617965446/WebSite/SunsetSound/chimes_owawdi.mp3"
   );
   // audio flowers
   let marimbahome = new Audio(
-    "https://res.cloudinary.com/dta6lllnx/video/upload/v1611244928/FlowerSounds/marimba_oysqpi.mp3"
+    "https://res.cloudinary.com/dlmhpqesp/video/upload/v1617964004/WebSite/FlowersSound/marimba_afem9k.mp3"
   );
   let audiovinyl = new Audio(
-    "https://res.cloudinary.com/dta6lllnx/video/upload/v1611244930/FlowerSounds/vinyl_aq3r8t.mp3"
+    "https://res.cloudinary.com/dlmhpqesp/video/upload/v1617964004/WebSite/FlowersSound/vinyl_bqfh8w.mp3"
   );
 
   return (
